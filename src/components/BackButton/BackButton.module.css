@@ -1,0 +1,19 @@
+.button_container {
+	width: 70px;
+	margin-right: 8px;
+	margin-bottom: 25px;
+}
+
+.back_link {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	text-decoration: none;
+	color: var(--accent-color);
+
+	font-size: inherit;
+}
+.back_link:hover,
+.back_link:focus {
+	color: var(--hover-color);
+}

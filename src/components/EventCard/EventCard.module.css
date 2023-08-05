@@ -1,0 +1,139 @@
+.card {
+	background-color: var(--background-color);
+	height: 480px;
+	border-radius: 12px;
+	padding-bottom: 16px;
+	box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
+	overflow: hidden;
+}
+
+.pictureBox {
+	position: relative;
+}
+
+.picture {
+	width: 100%;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+	object-fit: cover;
+}
+
+.categoryWrap {
+	position: absolute;
+	top: 12px;
+	left: 12px;
+}
+
+.category {
+	display: inline-block;
+	padding: 6px 12px;
+	border-radius: 8px;
+	margin-right: 12px;
+	background-color: #fff;
+	text-align: center;
+	font-size: 14px;
+	line-height: calc(20 / 14);
+	color: #7b61ff;
+}
+
+.priority {
+	display: inline-block;
+	padding: 6px 12px;
+	background-color: #fff;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: calc(20 / 14);
+	border-radius: 8px;
+}
+
+.priority[data-priority="high"] {
+	color: #ff2b77;
+}
+
+.priority[data-priority="low"] {
+	color: #6bd475;
+}
+
+.priority[data-priority="medium"] {
+	color: #e2a300;
+}
+
+.infoBox {
+	cursor: pointer;
+	position: relative;
+	transition: transform 0.3s ease-in-out;
+	background-color: var(--background-color);
+}
+.info {
+	padding: 16px 16px 8px 16px;
+}
+.timetable {
+	display: flex;
+	position: absolute;
+	top: -35%;
+	left: 0;
+	justify-content: space-between;
+	padding: 8px 16px;
+	background-color: rgba(255, 255, 255, 0.8);
+	width: 100%;
+}
+
+.timetable span {
+	color: var(--accent-color);
+	font-size: 14px;
+	font-weight: 400;
+	line-height: calc(24 / 14);
+}
+.title {
+	color: var(--fisrt-title-color);
+	margin-bottom: 16px;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: calc(24 / 16);
+}
+
+.description {
+	color: var(--fisrt-text-color);
+	font-size: 14px;
+	line-height: calc(20 / 14);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.raised {
+	transform: translateY(-40px);
+}
+
+.infoBtn {
+	display: none;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+	margin-top: 10px;
+	width: 114px;
+	height: 40px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-radius: 8px;
+	background-color: var(--accent-color);
+	color: var(--button-text-color);
+
+	text-align: center;
+
+	font-size: 14px;
+
+	font-weight: 500;
+	line-height: 1.43;
+	margin-left: auto;
+}
+
+.infoBox.raised .infoBtn {
+	display: flex;
+	opacity: 1;
+}
+.infoBtn:hover,
+.infoBtn:focus {
+	background-color: var(--hover-color);
+}

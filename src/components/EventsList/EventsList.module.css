@@ -1,0 +1,16 @@
+.eventsList {
+	display: grid;
+	width: 100%;
+	grid-template-columns: 296px;
+	gap: 24px;
+	justify-content: center;
+
+	@media screen and (min-width: 768px) {
+		padding-top: 40px;
+		grid-template-columns: 332px 332px;
+	}
+
+	@media screen and (min-width: 1280px) {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}

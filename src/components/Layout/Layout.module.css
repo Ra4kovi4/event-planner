@@ -1,0 +1,28 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	padding: 0 16px;
+	background-color: #fff;
+}
+
+@media screen and (min-width: 320px) {
+	.container {
+		padding: 0 25px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		padding: 0 48px;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.container {
+		padding: 0 64px;
+	}
+}
+/* .main {
+	background: url("../../assets/background.svg");
+} */
