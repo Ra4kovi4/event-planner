@@ -1,4 +1,5 @@
 import { EventDetails } from "../components/EventDetails";
+
 import { BackButton } from "../components/BackButton";
 import { Container } from "../components/Container";
 const EventPage = () => {

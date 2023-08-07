@@ -1,0 +1,9 @@
+.enabled {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	& .input:invalid ~ .inputBtn::after {
+		display: block;
+	}
+}

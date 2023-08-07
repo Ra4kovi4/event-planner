@@ -1,16 +1,15 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { formatterDate } from "../../helpers";
+
 import { Link } from "react-router-dom";
 import css from "./EventCard.module.css";
+
 export const EventsCard = ({ event }) => {
 	const [isInfoBoxRaised, setIsInfoBoxRaised] = useState(false);
 
 	const handleInfoBoxClick = () => {
 		setIsInfoBoxRaised(!isInfoBoxRaised);
 	};
-
-	const newDate = formatterDate(event.selectDate);
 
 	return (
 		<li className={css.card}>
@@ -33,10 +32,11 @@ export const EventsCard = ({ event }) => {
 				className={`${css.infoBox} ${isInfoBoxRaised ? css.raised : ""}`}
 				onClick={handleInfoBoxClick}>
 				<div className={css.timetable}>
-					<span>
-						{newDate} at {event.selectTime} a.m.
+					<span className={css.span}>
+						{event.selectDate} at {event.selectTime}
 					</span>
-					<span>{event.location}</span>
+
+					<span className={css.span}>{event.location}</span>
 				</div>
 				<div className={css.info}>
 					<h2 className={css.title}>{event.title}</h2>

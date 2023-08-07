@@ -1,0 +1,328 @@
+.addForm {
+	display: flex;
+	flex-direction: column;
+
+	width: 272px;
+	margin: 24px auto 136px auto;
+	padding: 40px 16px;
+
+	border-radius: 8px;
+	background: var(--background-color);
+	box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
+
+	@media screen and (min-width: 768px) {
+		width: 688px;
+		padding: 40px 24px;
+	}
+
+	@media screen and (min-width: 1280px) {
+		width: 1280px;
+		padding: 40px 40px 54px 40px;
+	}
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	margin-bottom: 40px;
+
+	@media screen and (min-width: 768px) {
+		flex-wrap: wrap;
+		column-gap: 25px;
+		max-height: 520px;
+	}
+
+	@media screen and (min-width: 1280px) {
+		max-height: 320px;
+		column-gap: 42px;
+		margin-bottom: 60px;
+	}
+}
+.enabled {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	& .input:invalid ~ .inputBtn::after {
+		display: block;
+	}
+}
+.inputTitle {
+	color: var(--accent-color);
+	font-size: 16px;
+	line-height: 1;
+	letter-spacing: 0.4px;
+	margin-bottom: 7px;
+	text-align: left;
+}
+.input,
+.textArea,
+.timeInput {
+	padding: 16px 30px 16px 12px;
+	border-radius: 8px;
+	border: 1px solid var(--placeholder-color);
+	width: 100%;
+	color: #49454f;
+}
+
+.input::placeholder,
+.textArea::placeholder {
+	color: var(--placeholder-color);
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.label {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	position: relative;
+}
+.closeIconTextArea {
+	display: block;
+	width: 24px;
+	position: absolute;
+	right: 3%;
+	top: 20%;
+}
+.closeIcon {
+	display: block;
+	width: 24px;
+	position: absolute;
+	right: 3%;
+	top: 49%;
+}
+.arrowIcon {
+	width: 24px;
+}
+.textArea {
+	height: 156px;
+	resize: none;
+	overflow-wrap: break-word;
+}
+.categoryWrapper,
+.priorityWrapper {
+	position: relative;
+	cursor: pointer;
+}
+
+.styledSelect {
+	position: absolute;
+	display: flex;
+	top: 12%;
+	right: 3%;
+	padding-top: 3px;
+	width: 100%;
+	height: 100%;
+	justify-content: right;
+	gap: 13px;
+	font-size: 12px;
+
+	@media screen and (min-width: 768px) {
+		font-size: 14px;
+	}
+}
+.optionWrapper {
+	display: inline-flex;
+	align-items: center;
+	height: 19px;
+}
+.selectContainer {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	z-index: 5;
+	width: 100%;
+	background-color: var(--background-color);
+	padding: 8px 14px;
+
+	border-radius: 6px;
+	font-size: 12px;
+	box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
+
+	@media screen and (min-width: 768px) {
+		padding: 8px 18px;
+		width: 132px;
+	}
+}
+.selectItem {
+	padding: 16px 0;
+
+	color: var(--title-color);
+
+	border-bottom: 1px solid var(--placeholder-color);
+}
+
+.calendar {
+	position: absolute;
+	top: 88px;
+	right: 0;
+	z-index: 50;
+	width: 100%;
+	border-radius: 11px;
+	background: var(--background-color);
+	box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.07);
+
+	padding: 20px;
+	width: 240px;
+
+	@media screen and (min-width: 768px) {
+		width: 308px;
+	}
+
+	@media screen and (min-width: 1280px) {
+		width: 372px;
+	}
+}
+.inputBtn {
+	position: absolute;
+	left: 10%;
+	top: 50%;
+	z-index: 15;
+	outline: none;
+	cursor: pointer;
+
+	border: none;
+	background-color: transparent;
+	color: var(--button-color);
+
+	width: 24px;
+	height: 24px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&::after {
+		content: "Invalid input";
+
+		display: none;
+
+		position: absolute;
+		bottom: -36px;
+		right: 7px;
+
+		width: 200px;
+
+		color: var(--button-color);
+		text-align: right;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 1.33;
+	}
+}
+.uploadButton {
+	display: inline-block;
+	background-color: #7b61ff;
+	color: white;
+	padding: 8px 16px;
+	border-radius: 4px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.hiddenInput {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	cursor: pointer;
+}
+.error {
+	font-size: 8px;
+	color: var(--high-color);
+	margin-left: auto;
+	margin-top: -10px;
+	margin-bottom: 0px;
+}
+.fakeInput {
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 56px;
+	padding: 16px 30px 16px 12px;
+	border-radius: 8px;
+	border: 1px solid var(--placeholder-color);
+	color: var(--placeholder-color);
+	font-size: 16px;
+	line-height: 1.5;
+	align-items: center;
+}
+.pictureLabel {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	position: relative;
+}
+.inputTitlePicture {
+	color: var(--placeholder-color);
+	font-size: 16px;
+	line-height: 1;
+	letter-spacing: 0.4px;
+	margin-bottom: 7px;
+	text-align: left;
+}
+.inputPhoto {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.priorityTitle,
+.categoryTitle {
+	display: block;
+	color: var(--accent-color);
+	font-size: 16px;
+	line-height: 1;
+	letter-spacing: 0.4px;
+	margin-bottom: 7px;
+	margin-right: auto;
+	text-align: start;
+}
+.submitBtn {
+	display: flex;
+	height: 56px;
+	width: 100%;
+	padding: 16px 12px;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--accent-color);
+	color: var(--button-text-color);
+
+	font-size: 16px;
+
+	font-weight: 500;
+	line-height: normal;
+	@media screen and (min-width: 768px) {
+		width: 193px;
+		margin-left: auto;
+	}
+}
+.submitBtn:hover,
+.submitBtn:focus {
+	background-color: var(--hover-color);
+}
+.timeLabel {
+	position: relative;
+}
+.timeContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.timeInput {
+	z-index: 100;
+}
+.timeSelectBtn {
+	position: absolute;
+	bottom: 20%;
+	right: 12px;
+}

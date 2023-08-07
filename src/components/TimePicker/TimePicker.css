@@ -1,0 +1,44 @@
+.ant-space-item {
+	width: 100%;
+}
+
+.css-dev-only-do-not-override-fpg3f5 .ant-picker {
+	width: 98%;
+	height: 54px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 4px 11px 4px;
+	color: rgba(0, 0, 0, 0.88);
+	border: 1px solid var(--placeholder-color);
+	font-size: 14px;
+	line-height: 1;
+	list-style: none;
+	font-family: "Poppins", "sans-serif";
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	background: #ffffff;
+	border-radius: 8px;
+	transition: border 0.2s, box-shadow 0.2s;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+.css-dev-only-do-not-override-fpg3f5.ant-picker-dropdown
+	.ant-picker-time-panel-column
+	> li.ant-picker-time-panel-cell-selected
+	.ant-picker-time-panel-cell-inner {
+	font-weight: 600;
+}
+
+.css-dev-only-do-not-override-fpg3f5.ant-picker-dropdown
+	.ant-picker-time-panel-column
+	> li.ant-picker-time-panel-cell-selected
+	.ant-picker-time-panel-cell-inner {
+	background: var(--accent-color);
+}
+.css-dev-only-do-not-override-fpg3f5.ant-btn-primary {
+	background-color: var(--accent-color);
+	font-family: "Poppins";
+}

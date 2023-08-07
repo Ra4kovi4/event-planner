@@ -1,0 +1,65 @@
+.navWrap {
+	@media screen and (min-width: 768px) {
+		display: grid;
+		grid-template-columns: auto auto;
+		justify-content: space-between;
+
+		align-items: center;
+		padding-bottom: 24px;
+	}
+	@media screen and (min-width: 1280px) {
+		display: grid;
+		grid-template-columns: auto auto;
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: 24px;
+	}
+}
+.filterWrap {
+	display: grid;
+	grid-template-columns: auto auto;
+
+	justify-content: flex-end;
+	margin-bottom: 40px;
+
+	@media screen and (min-width: 768px) {
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
+		margin-bottom: 0;
+		column-gap: 24px;
+	}
+}
+.addButton {
+	width: 56px;
+	height: 56px;
+	background-color: var(--accent-color);
+	border-radius: 8px;
+	box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: background-color 250ms linear;
+
+	@media screen and (min-width: 768px) {
+		width: 100%;
+		padding: 16px 12px;
+	}
+}
+
+.addButton:hover,
+.addButton:focus {
+	background-color: var(--accent-color);
+}
+
+.addButtonText {
+	display: none;
+	@media screen and (min-width: 768px) {
+		display: inline-block;
+		margin-left: 16px;
+		color: var(--button-text-color);
+		font-size: 16px;
+		font-weight: 500;
+		line-height: calc(24 / 16);
+	}
+}

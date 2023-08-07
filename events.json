@@ -2,301 +2,331 @@
 	{
 		"title": "velit-illo-voluptas",
 		"description": "Mollitia odit est ex optio at pariatur debitis. Quidem necessitatibus quam. Iste quo nihil rem sequi dolorem.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "10.08.2023",
 		"location": "Erdmanside",
 		"category": "business",
 		"picture": "https://images.pexels.com/photos/301943/pexels-photo-301943.jpeg?auto=compress&cs=tinysrgb&w=1600",
-		"priority": "medium"
+		"priority": "Medium",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "ea-quasi-porro",
 		"description": "Odio earum quia earum quidem et magnam. Omnis sapiente minus consectetur expedita. Adipisci beatae nam. Non repudiandae laboriosam consequatur provident laboriosam non aliquid dolore dolor. Amet cum eligendi iste eos accusantium consequatur.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "22.11.2023",
 		"location": "Conroe",
 		"category": "business",
 		"picture": "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1600",
-		"priority": "high"
+		"priority": "High",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "deleniti-nihil-eum",
 		"description": "Commodi est consectetur quasi libero nemo doloribus quis. Nisi numquam earum qui rem sapiente. Magnam magni blanditiis laboriosam quisquam occaecati recusandae eveniet. Reprehenderit rem consequatur tenetur. Cupiditate error maiores incidunt fugiat incidunt necessitatibus.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am.",
 		"selectDate": "23.10.2023",
 		"location": "Agnesfield",
 		"category": "business",
 		"picture": "https://images.pexels.com/photos/159213/hall-congress-architecture-building-159213.jpeg?auto=compress&cs=tinysrgb&w=1600",
-		"priority": "low"
+		"priority": "Low",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "eligendi-ipsa-provident",
 		"description": "Labore maiores placeat fugit consequuntur officia voluptatum iste. Expedita aperiam expedita quod et voluptates dolore. Sit impedit cupiditate.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "12.12.2023",
 		"location": "North Emmett",
 		"category": "business",
 		"picture": "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=1600",
-		"priority": "high"
+		"priority": "High",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "voluptas-molestias-perspiciatis",
 		"description": "Odit sequi laudantium. Aspernatur cupiditate iste odio dignissimos. Necessitatibus doloremque vero consequuntur maiores molestias. Possimus fugiat a aut corrupti voluptatibus. Autem odit eaque pariatur aperiam. At hic velit non sint numquam.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "01.02.2024",
 		"location": "Carlosstead",
 		"category": "sport",
 		"picture": "https://images.pexels.com/photos/15869385/pexels-photo-15869385.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "low"
+		"priority": "Low",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "quisquam-esse-iusto",
 		"description": "Reiciendis pariatur quod similique neque dolores dolores labore tenetur adipisci. Quas voluptas aliquam id aspernatur voluptatem nesciunt quo. Molestias tenetur ea adipisci provident placeat aliquam expedita incidunt ad. Est occaecati vel. Veritatis dignissimos praesentium nostrum sed at. Nostrum consectetur itaque eos minus minima earum non nisi.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "25.07.2024",
 		"location": "Parkercester",
 		"category": "sport",
 		"picture": "https://images.pexels.com/photos/6999241/pexels-photo-6999241.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "low"
+		"priority": "Low",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "laboriosam-quidem-dolore",
 		"description": "Dignissimos cumque voluptatum nemo ad saepe sunt quod. Laudantium labore quos doloribus aliquam magni magnam omnis culpa. Id magni quis. Voluptatem velit nihil soluta assumenda eum similique sapiente optio. Excepturi doloribus totam totam doloremque ullam eos expedita alias. Iure numquam blanditiis iste repudiandae molestias autem voluptatibus ducimus.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "11.11.2023",
 		"location": "East Princeworth",
 		"category": "sport",
 		"picture": "https://images.pexels.com/photos/6203636/pexels-photo-6203636.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "high"
+		"priority": "High",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "quis-natus-cum",
 		"description": "Voluptates officiis unde. Omnis perspiciatis fugiat id harum enim. Nisi numquam deleniti vero est.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "15.12.2023",
 		"location": "Angelinaside",
 		"category": "sport",
 		"picture": "https://images.pexels.com/photos/3772226/pexels-photo-3772226.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "high"
+		"priority": "High",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "ea-alias-reiciendis",
 		"description": "Dolorem aliquid quidem. Nostrum dolores ex natus quos quam voluptatum reprehenderit. Voluptates neque sunt omnis rerum enim ipsa neque. Officia ullam adipisci delectus reiciendis facere unde expedita repellat. Eaque assumenda cumque iste neque et ex inventore itaque.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "30.12.2023",
 		"location": "Millcreek",
 		"category": "sport",
 		"picture": "https://images.pexels.com/photos/1325654/pexels-photo-1325654.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "medium"
+		"priority": "Medium",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "reiciendis-error-aut",
 		"description": "Laudantium perferendis ipsam perspiciatis earum expedita facere magni. Quibusdam occaecati delectus quae perferendis. Sapiente similique ullam. Rerum repudiandae debitis eum laborum ipsam.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "05.01.2024",
 		"location": "Erynland",
 		"category": "party",
 		"picture": "https://images.pexels.com/photos/3379261/pexels-photo-3379261.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "high"
+		"priority": "High",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "eaque-repellat-mollitia",
 		"description": "Dolorem commodi quas corrupti. Occaecati provident labore. Deserunt soluta praesentium enim quasi vel enim.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "08.12.2023",
 		"location": "West Gregorystad",
 		"category": "party",
 		"picture": "https://images.pexels.com/photos/4684185/pexels-photo-4684185.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "low"
+		"priority": "Low",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "facere-cumque-fugiat",
 		"description": "Veniam iure dolorem. Consectetur nisi laborum sint beatae sunt vero ipsum. Enim ipsum enim ipsam voluptas excepturi officia itaque. Quae magnam consequuntur dicta voluptates vitae.",
-		"selectselectTime": "10:00 a.m.",
+		"selecTime": "10:00 am",
 		"selectDate": "06.06.2024",
 		"location": "Scottsdale",
 		"category": "party",
 		"picture": "https://images.pexels.com/photos/1230397/pexels-photo-1230397.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "low"
+		"priority": "Low",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "doloremque-sed-libero",
-		"description": "Repudiandae ipsam repellat aspernatur reprehenderit est consectetur voluptatibus error. Facere fuga maxime quidem. Officiis ex labore et cum harum modi consequuntur corrupti. Sunt quas sed occaecati error. Quidem aliquid fugiat dignissimos officiis cupiditate consectetur voluptatibus nihil. Doloribus quos enim.",
-		"selectTime": "10:00 a.m.",
+		"description": "Repudiandae ipsam repellat aspernatur reprehenderit est consectetur voluptatibus error. Facere fugamxime quidem. Officiis ex labore et cum harum modi consequuntur corrupti. Sunt quas sed occaecati error. Quidem aliquid fugiat dignissimos officiis cupiditate consectetur voluptatibus nihil. Doloribus quos enim.",
+		"selectTime": "10:00 am",
 		"selectDate": "20.03.2024",
 		"location": "Lake Humbertoland",
 		"category": "party",
 		"picture": "https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "low"
+		"priority": "Low",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "corrupti-nulla-aut",
 		"description": "Nostrum ipsum porro saepe quibusdam. Rerum rerum ratione maxime tempora nihil cupiditate quis. Eveniet modi ratione dolor fugiat. Natus eaque ipsum.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "19.08.2023",
 		"location": "West Nina",
 		"category": "conference",
 		"picture": "https://images.pexels.com/photos/2240771/pexels-photo-2240771.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "medium"
+		"priority": "Medium",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "aperiam-qui-et",
 		"description": "Ex ducimus officia. Veniam ipsam et placeat modi corrupti a quo quos maiores. Dicta porro blanditiis earum necessitatibus nesciunt eum laudantium.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "20.09.2023",
 		"location": "Lake Destiny",
 		"category": "conference",
 		"picture": "https://images.pexels.com/photos/3184660/pexels-photo-3184660.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "low"
+		"priority": "Low",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "quae-consectetur-molestiae",
 		"description": "Iste soluta totam dolore vero occaecati doloribus quae similique. Praesentium ad libero doloribus sed a expedita. Eos voluptate quasi. Odio fuga quod eveniet adipisci tempore quaerat. Ipsum expedita illo molestias ullam.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "10.10.2023",
 		"location": "Portsmouth",
 		"category": "conference",
 		"picture": "https://images.pexels.com/photos/3321799/pexels-photo-3321799.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "high"
+		"priority": "High",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "perferendis-quos-architecto",
 		"description": "Numquam maiores at eius omnis error voluptate id hic excepturi. Odit quis quam soluta sint voluptas. Eveniet veniam dolor ducimus consequatur asperiores at quae necessitatibus. Alias odio blanditiis aliquam nobis. Veniam reiciendis adipisci earum repellendus culpa placeat eligendi eius officia. Omnis iste ipsa.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "17.08.2023",
 		"location": "Abernathyborough",
 		"category": "conference",
 		"picture": "https://images.pexels.com/photos/159806/meeting-modern-room-conference-159806.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "high"
+		"priority": "High",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "repudiandae-quos-aspernatur",
-		"description": "Quae officiis quae praesentium iusto tempora consequatur autem illo soluta. Neque id veritatis nulla molestiae temporibus. Rem nam quam reprehenderit. Nulla qui dicta.",
-		"selectTime": "10:00 a.m.",
+		"description": "Quae officiis quae praesentium iusto tempora consequatur autem illo soluta. Neque id veritatis nullamlestiae temporibus. Rem nam quam reprehenderit. Nulla qui dicta.",
+		"selectTime": "10:00 am",
 		"selectDate": "14.11.2023",
 		"location": "West Babylon",
 		"category": "conference",
 		"picture": "https://images.pexels.com/photos/3321796/pexels-photo-3321796.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "high"
+		"priority": "High",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "nulla-esse-porro",
 		"description": "Totam at porro ab officiis tenetur minima provident necessitatibus sapiente. Suscipit modi magni. Commodi ipsum possimus voluptate maxime. Consequatur placeat qui repellat necessitatibus.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "15.12.2023",
 		"location": "Lake Larueburgh",
 		"category": "workshop",
 		"picture": "https://images.pexels.com/photos/162625/grinder-hitachi-power-tool-flexible-162625.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "medium"
+		"priority": "Medium",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "sed-magni-quo",
 		"description": "Ut vel dolor praesentium nemo exercitationem magnam corrupti. Adipisci vitae fugiat pariatur vero doloribus. Aspernatur nemo quidem iusto.",
-		"selectTime": "10:00 a.m. a.m.",
+		"selectTime": "10:00 am am",
 		"selectDate": "06.12.2023",
 		"location": "New Cornell",
 		"category": "workshop",
 		"picture": "https://images.pexels.com/photos/115558/pexels-photo-115558.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "low"
+		"priority": "Low",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "occaecati-ut-totam",
 		"description": "Accusamus necessitatibus similique culpa natus nesciunt veniam. Ea aliquid voluptatem totam rem quis expedita dolorum iure. Veniam vero temporibus sit culpa.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "20.09.2023",
 		"location": "Port Britneystead",
 		"category": "workshop",
 		"picture": "https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "medium"
+		"priority": "Medium",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "quasi-nesciunt-minus",
 		"description": "Labore provident voluptatum provident. Nihil doloribus quam accusamus debitis quasi harum perferendis perspiciatis. Nostrum enim similique corrupti repudiandae laboriosam vel aperiam cum eius. Alias dignissimos voluptates aperiam.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "29.08.2023",
 		"location": "San Juan",
 		"category": "workshop",
-		"picture": "https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "medium"
+		"picture": "https://images.pexels.com/photos/162553/keys-workshopmchanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=400",
+		"priority": "Medium",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "expedita-cupiditate-culpa",
 		"description": "Vero exercitationem impedit praesentium tenetur iure saepe iure non adipisci. Fugiat voluptatum voluptate excepturi. Sunt repudiandae iure illo voluptas earum.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "30.09.2023",
 		"location": "Champlinshire",
 		"category": "art",
 		"picture": "https://images.pexels.com/photos/3095769/pexels-photo-3095769.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "low"
+		"priority": "Low",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "laboriosam-temporibus-facilis",
-		"description": "Distinctio natus minus fugiat ad vel quidem. Nobis magni fugit occaecati ullam tempora molestias. Aliquam vitae reprehenderit quasi enim sapiente qui maxime delectus at. Officia atque consequatur deleniti consequuntur quasi labore laborum assumenda.",
-		"selectTime": "10:00 a.m.",
+		"description": "Distinctio natus minus fugiat ad vel quidem. Nobis magni fugit occaecati ullam temporamlestias. Aliquam vitae reprehenderit quasi enim sapiente qui maxime delectus at. Officia atque consequatur deleniti consequuntur quasi labore laborum assumenda.",
+		"selectTime": "10:00 am",
 		"selectDate": "10.12.2023",
-		"location": "Pomona",
+		"location": "pmna",
 		"category": "art",
 		"picture": "https://images.pexels.com/photos/1575841/pexels-photo-1575841.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "low"
+		"priority": "Low",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "quos-eius-assumenda",
 		"description": "Nostrum quam placeat nobis iure ut eaque nesciunt mollitia. Ipsam nulla esse. Quos quam omnis cupiditate nostrum.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "16.06.2024",
 		"location": "West Jackworth",
 		"category": "art",
 		"picture": "https://images.pexels.com/photos/3094218/pexels-photo-3094218.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "low"
+		"priority": "Low",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "necessitatibus-suscipit-corporis",
 		"description": "Hic commodi rerum. Atque delectus hic. Voluptate magni et atque dolor vitae impedit fuga. Neque eaque fugit. Sunt illo delectus nostrum iusto laudantium. Deserunt repellat porro rerum iste odio alias quam eum nulla.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "30.09.2023",
 		"location": "Fond du Lac",
 		"category": "art",
 		"picture": "https://images.pexels.com/photos/2372982/pexels-photo-2372982.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "high"
+		"priority": "High",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "aspernatur-hic-culpa",
 		"description": "Fugit debitis autem reprehenderit nemo accusamus. Velit assumenda cupiditate soluta incidunt saepe nostrum impedit. Porro dicta debitis fuga culpa enim. Veniam tempora eum sint.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "10.10.2024",
 		"location": "Aricside",
 		"category": "art",
 		"picture": "https://images.pexels.com/photos/2086361/pexels-photo-2086361.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "high"
+		"priority": "High",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "explicabo-aliquam-dolore",
 		"description": "Enim laudantium mollitia corrupti quae distinctio amet est. Nulla dolor ea architecto mollitia impedit. Possimus nulla similique occaecati sit adipisci odit cum. Inventore fuga dolore animi iure nesciunt aliquid deserunt. Cum ducimus perferendis exercitationem. Quod omnis facere sunt nisi quis sapiente nihil.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "16.11.2023",
 		"location": "Myronshire",
 		"category": "music",
 		"picture": "https://images.pexels.com/photos/3783471/pexels-photo-3783471.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "medium"
+		"priority": "Medium",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "ea-iusto-est",
 		"description": "Cum dolore saepe. Porro cupiditate facere facilis deserunt adipisci non quo esse. Doloribus non labore perspiciatis facilis enim porro in quos. Blanditiis non eius laborum labore odio magni voluptatum nulla.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "15.11.2023",
 		"location": "Florin",
 		"category": "music",
 		"picture": "https://images.pexels.com/photos/1885213/pexels-photo-1885213.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "low"
+		"priority": "Low",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	},
 	{
 		"title": "rerum-quas-quas",
 		"description": "Non quibusdam ullam sit aut asperiores mollitia explicabo nisi. Totam quibusdam voluptatum nesciunt saepe architecto quisquam. Ut facere voluptatem.",
-		"selectTime": "10:00 a.m.",
+		"selectTime": "10:00 am",
 		"selectDate": "08.09.2023",
 		"location": "Guiseppefurt",
 		"category": "music",
 		"picture": "https://images.pexels.com/photos/4709822/pexels-photo-4709822.jpeg?auto=compress&cs=tinysrgb&w=400",
-		"priority": "high"
+		"priority": "High",
+		"createdAt": "2022-08-07T18:41:07.256+00:00"
 	}
 ]

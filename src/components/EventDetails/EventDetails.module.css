@@ -123,23 +123,25 @@
 	color: var(--fisrt-text-color);
 	font-size: 14px;
 	line-height: calc(20 / 14);
+	width: 100%;
+	display: block;
 }
 
 .deleteBtn {
 	display: flex;
 
-	height: 40px;
+	height: 32px;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 
-	border-radius: 8px;
+	border-radius: 4px;
 	background-color: var(--accent-color);
 	color: var(--button-text-color);
 
 	text-align: center;
 
-	font-size: 14px;
+	font-size: 12px;
 
 	font-weight: 500;
 	line-height: 1.43;
@@ -149,4 +151,30 @@
 .infoBtn:hover,
 .infoBtn:focus {
 	background-color: var(--hover-color);
+}
+.buttonContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.editBtn {
+	width: 108px;
+	height: 32px;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--accent-color);
+	text-align: center;
+	font-family: Poppins;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.33;
+	margin-right: 24px;
+	border: 1px solid var(--accent-color);
+	@media screen and (min-width: 768px) {
+		width: 55px;
+		margin-right: 16px;
+	}
 }

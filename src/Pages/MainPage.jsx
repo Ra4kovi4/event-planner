@@ -1,10 +1,11 @@
 import { useEffect, useState, memo } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { EventsList } from "../components/EventsList";
 import { Loader } from "../components/Loader";
 import { fetchEvents } from "../service";
 import { Container } from "../components/Container";
+import { NavBar } from "../components/NavBar";
 
 const MainPage = memo(() => {
 	const [events, setEvents] = useState([]);
@@ -31,11 +32,10 @@ const MainPage = memo(() => {
 	return (
 		<>
 			<Container>
-				{isLoading && <Loader />}
+				<NavBar />
 				{!isLoading && <EventsList events={events} />}
+				{isLoading && <Loader />}
 			</Container>
-
-			<ToastContainer autoClose={2000} />
 		</>
 	);
 });

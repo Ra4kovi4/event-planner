@@ -23,9 +23,11 @@
 	--button-color: #7b61ff;
 	--hover-color: #6243ff;
 	--button-dsbd-color: #aca7c3;
+	--placeholder-color: #aca7c3;
 	--input-color: #888;
 	--background-color: #fff;
 	--background-header: #fefcff;
+	--title-color: #3f3f3f;
 }
 
 a {

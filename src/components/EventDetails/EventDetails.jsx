@@ -2,10 +2,10 @@ import { useParams, useNavigate } from "react-router-dom";
 import { fetchEventById, deleteEvent } from "../../service";
 import { useState, useEffect } from "react";
 import { Loader } from "../Loader";
-import { formatterDate } from "../../helpers";
+
 import css from "../EventDetails/EventDetails.module.css";
 
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export const EventDetails = () => {
@@ -13,10 +13,6 @@ export const EventDetails = () => {
 	const [isLoading, setIsLoading] = useState(false);
 	const { id } = useParams();
 	const navigate = useNavigate();
-	let newDate;
-	if (event) {
-		newDate = formatterDate(event.selectDate);
-	}
 
 	useEffect(() => {
 		getEventById(id);
@@ -78,22 +74,28 @@ export const EventDetails = () => {
 									</div>
 									<span className={css.location}>{event.location}</span>
 									<span className={css.time}>
-										{newDate} at {event.selectTime} a.m.
+										{event.selectDate} at {event.selectTime}
 									</span>
 								</div>
 							</div>
-
-							<button
-								className={css.deleteBtn}
-								type='button'
-								onClick={clickHandler}>
-								Delete event
-							</button>
+							<div className={css.buttonContainer}>
+								<button
+									className={css.editBtn}
+									type='button'
+									onClick={() => navigate(`/events/${event._id}/edit`)}>
+									Edit
+								</button>
+								<button
+									className={css.deleteBtn}
+									type='button'
+									onClick={clickHandler}>
+									Delete event
+								</button>
+							</div>
 						</div>
 					</div>
 				</>
 			)}
-			<ToastContainer />
 		</>
 	);
 };
