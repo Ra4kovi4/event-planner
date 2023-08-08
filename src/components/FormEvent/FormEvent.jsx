@@ -12,17 +12,7 @@ import closeIcon from "../../assets/cross.svg";
 import { toast } from "react-toastify";
 import arrowIcon from "../../assets/arrow.svg";
 import crossGryeIcon from "../../assets/crossgrey.svg";
-
-const priorities = ["High", "Low", "Medium"];
-const categories = [
-	"Art",
-	"Business",
-	"Music",
-	"Conference",
-	"Workshop",
-	"Party",
-	"Sport",
-];
+import { priorities, categories } from "../../constants/data";
 
 export const FormEvent = ({ event = null }) => {
 	const [isCategoryActive, setIsCategoryActive] = useState(false);

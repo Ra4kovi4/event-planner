@@ -1,7 +1,11 @@
 import PropTypes from "prop-types";
 import css from "./Title.module.css";
 export const Title = ({ children }) => {
-	return <h2 className={css.title}>{children}</h2>;
+	return (
+		<div className={css.mainTitleContainer}>
+			<h2 className={css.mainTitle}>{children}</h2>
+		</div>
+	);
 };
 
 Title.propTypes = {

@@ -1,1 +1,0 @@
-import{j as e}from"./index-ac42bb5e.js";import{P as s}from"./Container-fbb4edfe.js";const o="_title_49aey_1",r={title:o},i=({children:t})=>e.jsx("h2",{className:r.title,children:t});i.propTypes={children:s.node.isRequired};export{i as T};

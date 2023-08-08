@@ -10,6 +10,7 @@ import { NavBar } from "../components/NavBar/NavBar";
 const MainPage = memo(() => {
 	const [events, setEvents] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
+	const [selectedCategory, setSelectedCategory] = useState("");
 
 	useEffect(() => {
 		setIsLoading(true);
@@ -29,11 +30,28 @@ const MainPage = memo(() => {
 			setIsLoading(false);
 		}
 	};
+
+	const handleCategorySelect = (selectedCategory) => {
+		setSelectedCategory(selectedCategory);
+	};
+
+	const filteredEvents =
+		selectedCategory === "All" || !selectedCategory
+			? events
+			: events.filter((event) => event.category === selectedCategory);
+
 	return (
 		<>
 			<Container>
-				<NavBar />
-				{!isLoading && <EventsList events={events} />}
+				<NavBar onSelect={handleCategorySelect} />
+				{filteredEvents.length === 0 && (
+					<h3 style={{ fontFamily: "Poppins", fontSize: "36px", color: "red" }}>
+						Unfortunately we have not found any events matching your request
+					</h3>
+				)}
+				{!isLoading && filteredEvents.length !== 0 && (
+					<EventsList events={filteredEvents} />
+				)}
 				{isLoading && <Loader />}
 			</Container>
 		</>

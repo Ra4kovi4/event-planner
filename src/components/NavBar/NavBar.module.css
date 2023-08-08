@@ -1,20 +1,37 @@
 .navWrap {
+	margin-bottom: 40px;
+	padding: 0 24px 0 24px;
 	@media screen and (min-width: 768px) {
-		display: grid;
-		grid-template-columns: auto auto;
-		justify-content: space-between;
-
-		align-items: center;
-		padding-bottom: 24px;
+		margin-bottom: 56px;
 	}
+
 	@media screen and (min-width: 1280px) {
-		display: grid;
-		grid-template-columns: auto auto;
+		display: flex;
+		flex-direction: row-reverse;
 		justify-content: space-between;
 		align-items: center;
-		padding-bottom: 24px;
+
+		margin-bottom: 40px;
 	}
 }
+
+.navMenu {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 24px;
+
+	margin-bottom: 40px;
+
+	@media screen and (min-width: 768px) {
+		margin-bottom: 24px;
+	}
+
+	@media screen and (min-width: 1280px) {
+		margin-bottom: 0;
+	}
+}
+
 .filterWrap {
 	display: grid;
 	grid-template-columns: auto auto;
@@ -63,3 +80,205 @@
 		line-height: calc(24 / 16);
 	}
 }
+.container {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 24px;
+}
+
+/* .filterContainer {
+	position: relative;
+
+	@media screen and (min-width: 768px) {
+		min-width: 148px;
+	}
+}
+
+.category {
+	cursor: pointer;
+
+	padding: 16px;
+
+	border: none;
+	border-radius: 8px;
+	background-color: var(--white);
+	box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
+	color: var(--purple);
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+
+	transition: color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover {
+		color: var(--hover-black);
+	}
+
+	@media screen and (min-width: 768px) {
+		width: 100%;
+	}
+}
+
+.optionList {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: translateY(100%);
+	z-index: 25;
+
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	background-color: var(--white);
+
+	box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
+
+	& .option:nth-child(2n) .arrowIcon {
+		transform: rotate(180deg);
+	}
+}
+
+.option {
+	cursor: pointer;
+
+	border: none;
+	background-color: transparent;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	width: 100%;
+	padding: 8px 24px;
+
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1;
+	color: var(--light-gray);
+
+	border-bottom: 1px solid var(--light-gray);
+
+	&:first-of-type {
+		border-top: 1px solid var(--light-gray);
+	}
+
+	&:last-of-type {
+		border-bottom: none;
+	}
+
+	transition: color 350ms cubic-bezier(0.4, 0, 0.2, 1),
+		border-color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover,
+	&:focus {
+		color: var(--purple);
+		border-bottom-color: var(--purple);
+	}
+}
+
+.sort {
+	cursor: pointer;
+
+	padding: 16px;
+
+	border: none;
+	border-radius: 8px;
+	background-color: var(--white);
+	box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
+	color: var(--dark-gray);
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+
+	transition: color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover,
+	&:focus {
+		color: var(--purple);
+	}
+
+	@media screen and (min-width: 768px) {
+		width: 100%;
+		padding: 16px 24px;
+	}
+}
+
+.buttonText {
+	display: none;
+
+	@media screen and (min-width: 768px) {
+		display: inline;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: normal;
+	}
+}
+
+.expandedButton {
+	display: inline;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.wideContainer {
+	position: absolute;
+	z-index: 20;
+	min-width: 148px;
+}
+
+.showMenu {
+	border-radius: 8px 8px 0 0;
+	width: 100%;
+}
+
+.arrowIcon {
+	width: 18px;
+	height: 18px;
+}
+.filterButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 56px;
+	background-color: var(--background-color);
+	border: 1px solid var(--accent-color);
+}
+.span {
+	display: none;
+	color: var(--accent-color);
+
+	font-size: 16px;
+	margin-right: 16px;
+	font-weight: 500;
+
+	@media screen and (min-width: 768px) {
+		display: block;
+	}
+}
+.sortBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 56px;
+	background-color: var(--background-color);
+	border: 1px solid #3f3f3f;
+}
+.sortSpan {
+	display: none;
+	color: #3f3f3f;
+	font-size: 16px;
+	margin-right: 16px;
+	font-weight: 500;
+	@media screen and (min-width: 768px) {
+		display: block;
+	}
+} */

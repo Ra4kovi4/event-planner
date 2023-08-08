@@ -114,7 +114,7 @@
 	color: var(--fisrt-text-color);
 	font-size: 14px;
 	line-height: calc(20 / 14);
-	height: 60px;
+	height: 80px;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	margin-bottom: 20px;
@@ -124,9 +124,9 @@
 }
 
 .infoBtn {
-	display: none;
+	/* display: none; */
 	opacity: 0;
-
+	visibility: hidden;
 	margin-top: 10px;
 	width: 114px;
 	height: 40px;
@@ -142,13 +142,14 @@
 	font-weight: 500;
 	line-height: 1.43;
 	margin-left: auto;
-	transition: opacity 2000 cubic-bezier();
+	transition: visibility 2000 cubic-bezier(), opacity 2000 cubic-bezier();
 }
 
 .card:hover .infoBtn,
 .catd:focus .infoBtn {
 	display: flex;
 	opacity: 1;
+	visibility: visible;
 }
 .infoBtn:hover,
 .infoBtn:focus {
