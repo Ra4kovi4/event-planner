@@ -38,7 +38,7 @@ export const TimePickerComponent = ({ setFieldValue }) => {
 					use12Hours
 					format='h:mm a'
 					onChange={onChange}
-					className='time-picker'
+					className='clock'
 					popupClassName='custom-time-picker'
 					placeholder='Select Time'
 					allowClear='false'
@@ -52,5 +52,4 @@ export const TimePickerComponent = ({ setFieldValue }) => {
 TimePickerComponent.propTypes = {
 	setFieldValue: PropTypes.func,
 	handleSaveTime: PropTypes.func,
-	onClose: PropTypes.func,
 };

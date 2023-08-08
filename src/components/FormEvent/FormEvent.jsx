@@ -175,10 +175,9 @@ export const FormEvent = ({ event = null }) => {
 									className={css.error}
 								/>
 							</div>
-							<div className={css.enabled}>
+							<div className={css.enabledTime}>
 								<label className={css.timeLabel}>
-									<span className={css.inputTitle}>Select Time</span>
-
+									<span className={css.inputTitleTime}>Select Time</span>
 									<img src={arrowIcon} className={css.timeSelectBtn} />
 
 									<TimePickerComponent
@@ -190,6 +189,7 @@ export const FormEvent = ({ event = null }) => {
 										id='selectDate'
 										name='selectDate'
 										className={css.timeInput}
+										placeholder='select time'
 									/>
 								</label>
 							</div>

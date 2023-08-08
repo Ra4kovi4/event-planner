@@ -39,7 +39,8 @@
 		margin-bottom: 60px;
 	}
 }
-.enabled {
+.enabled,
+enabledTime {
 	display: flex;
 	flex-direction: column;
 	position: relative;
@@ -48,13 +49,18 @@
 		display: block;
 	}
 }
-.inputTitle {
+.inputTitle,
+.inputTitleTime {
 	color: var(--accent-color);
 	font-size: 16px;
 	line-height: 1;
 	letter-spacing: 0.4px;
 	margin-bottom: 7px;
 	text-align: left;
+	margin-right: auto;
+}
+.inputTitleTime {
+	margin-bottom: 10px;
 }
 .input,
 .textArea,
@@ -151,10 +157,10 @@
 	padding: 16px 0;
 
 	color: var(--title-color);
-
+}
+.selectItem:not(:last-child) {
 	border-bottom: 1px solid var(--placeholder-color);
 }
-
 .calendar {
 	position: absolute;
 	top: 88px;
@@ -243,7 +249,7 @@
 	display: flex;
 	position: relative;
 	width: 100%;
-	height: 56px;
+	height: 52px;
 	padding: 16px 30px 16px 12px;
 	border-radius: 8px;
 	border: 1px solid var(--placeholder-color);
@@ -311,6 +317,10 @@
 	background-color: var(--hover-color);
 }
 .timeLabel {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 	position: relative;
 }
 .timeContainer {
@@ -320,9 +330,17 @@
 }
 .timeInput {
 	z-index: 100;
+	position: absolute;
+	top: 33%;
+	left: 0;
+	pointer-events: none;
 }
 .timeSelectBtn {
 	position: absolute;
-	bottom: 20%;
+	bottom: 0;
 	right: 12px;
+	z-index: 1000;
+}
+.enabledTime {
+	margin-bottom: 20px;
 }
