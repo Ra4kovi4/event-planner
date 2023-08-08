@@ -1,4 +1,5 @@
 import { useEffect, useState, memo } from "react";
+
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { EventsList } from "../components/EventsList/EventsList";
@@ -44,7 +45,7 @@ const MainPage = memo(() => {
 		<>
 			<Container>
 				<NavBar onSelect={handleCategorySelect} />
-				{filteredEvents.length === 0 && (
+				{filteredEvents.length === 0 && !isLoading && (
 					<h3 style={{ fontFamily: "Poppins", fontSize: "36px", color: "red" }}>
 						Unfortunately we have not found any events matching your request
 					</h3>

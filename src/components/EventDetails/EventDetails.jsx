@@ -51,45 +51,51 @@ export const EventDetails = () => {
 			{isLoading && <Loader />}
 			{event && !isLoading && (
 				<>
-					<h1 className={css.title}>{event.title}</h1>
-					<div className={css.card}>
-						<div className={css.pictureBox}>
-							<img
-								src={event.picture}
-								width='272'
-								height='296'
-								alt={event.title}
-								className={css.picture}
-							/>
+					<div className={css.cardWrapper}>
+						<div className={css.titleWrapper}>
+							<h3 className={css.title}>{event.title}</h3>
 						</div>
-
-						<div className={css.info}>
-							<p className={css.description}>{event.description} </p>
-							<div className={css.infoBox}>
-								<div className={css.categoryWrap}>
-									<div className={css.category}>{event.category}</div>
-									<div className={css.priority} data-priority={event.priority}>
-										{event.priority}
-									</div>
-									<span className={css.location}>{event.location}</span>
-									<span className={css.time}>
-										{event.selectDate} at {event.selectTime}
-									</span>
-								</div>
+						<div className={css.card}>
+							<div className={css.pictureBox}>
+								<img
+									src={event.picture}
+									width='272'
+									height='296'
+									alt={event.title}
+									className={css.picture}
+								/>
 							</div>
-							<div className={css.buttonContainer}>
-								<button
-									className={css.editBtn}
-									type='button'
-									onClick={() => navigate(`/events/${event._id}/edit`)}>
-									Edit
-								</button>
-								<button
-									className={css.deleteBtn}
-									type='button'
-									onClick={clickHandler}>
-									Delete event
-								</button>
+
+							<div className={css.info}>
+								<p className={css.description}>{event.description} </p>
+								<div className={css.infoBox}>
+									<div className={css.categoryWrap}>
+										<div className={css.category}>{event.category}</div>
+										<div
+											className={css.priority}
+											data-priority={event.priority}>
+											{event.priority}
+										</div>
+										<span className={css.location}>{event.location}</span>
+										<span className={css.time}>
+											{event.selectDate} at {event.selectTime}
+										</span>
+									</div>
+								</div>
+								<div className={css.buttonContainer}>
+									<button
+										className={css.editBtn}
+										type='button'
+										onClick={() => navigate(`/events/${event._id}/edit`)}>
+										Edit
+									</button>
+									<button
+										className={css.deleteBtn}
+										type='button'
+										onClick={clickHandler}>
+										Delete event
+									</button>
+								</div>
 							</div>
 						</div>
 					</div>

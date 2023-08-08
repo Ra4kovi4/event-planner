@@ -14,6 +14,7 @@ export const ChangeLanguageForm = () => {
 				className={css.select}
 				id='contact-type'
 				value={contactType}
+				disabled
 				onChange={handleContactTypeChange}>
 				<option className={css.option} value='UK'>
 					UK

@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { fetchEventById } from "../service";
-
+import { Title } from "../components/Title/Title";
 import { toast } from "react-toastify";
 import { FormEvent } from "../components/FormEvent/FormEvent";
 import { BackButton } from "../components/BackButton/BackButton";
@@ -32,6 +32,7 @@ const EditEventPage = () => {
 		<>
 			<Container>
 				<BackButton />
+				<Title>Edit event</Title>
 				{event && <FormEvent isEdit={true} event={event} />}
 			</Container>
 		</>

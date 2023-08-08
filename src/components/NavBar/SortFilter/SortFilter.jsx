@@ -13,7 +13,7 @@ export const SortFilter = () => {
 	};
 	return (
 		<div className={css.sortWrap}>
-			<button className={css.sortButton} onClick={handleClick}>
+			<button className={css.sortButton} onClick={handleClick} disabled>
 				<span className={css.sortButtonTitle}>{activeSort || "Sort by"}</span>
 				<img className={css.sortBtnIcon} src={sortIcon} />
 			</button>

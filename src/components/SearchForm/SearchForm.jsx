@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import searchSVG from "../../assets/search.svg";
 import css from "./SearchForm.module.css";
 
@@ -10,9 +12,13 @@ export const SearchForm = () => {
 					className={css.searchInput}
 					type='text'
 					name='search'
+					disabled
 					placeholder='Search by keywords'
 				/>
 			</label>
 		</form>
 	);
+};
+SearchForm.propTypes = {
+	onSearch: PropTypes.func,
 };
