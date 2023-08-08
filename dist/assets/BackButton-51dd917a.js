@@ -1,0 +1,1 @@
+import{j as n,N as s}from"./index-5e5bb463.js";const c="/event-planner/assets/back-71db1193.svg",a="_button_container_fvxnp_1",o="_back_link_fvxnp_7",t={button_container:a,back_link:o},i=()=>n.jsx("div",{className:t.button_container,children:n.jsxs(s,{className:t.back_link,to:"/",children:[n.jsx("span",{children:n.jsx("img",{src:c,alt:"Back"})}),"Back"]})});export{i as B};

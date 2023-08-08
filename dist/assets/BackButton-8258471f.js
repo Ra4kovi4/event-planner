@@ -1,1 +1,0 @@
-import{j as n,N as t}from"./index-672433fa.js";const c="/assets/back-71db1193.svg",a="_button_container_fvxnp_1",o="_back_link_fvxnp_7",s={button_container:a,back_link:o},k=()=>n.jsx("div",{className:s.button_container,children:n.jsxs(t,{className:s.back_link,to:"/",children:[n.jsx("span",{children:n.jsx("img",{src:c,alt:"Back"})}),"Back"]})});export{k as B};

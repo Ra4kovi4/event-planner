@@ -5,7 +5,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { DatePicker } from "../Calendar/Calendar";
 import { addEventSchema } from "../../constants/addEventSchema";
 import { convertDateFormat } from "../../helpers";
-import { TimePickerComponent } from "../TimePicker";
+import { TimePickerComponent } from "../TimePicker/TimePicker";
 import { addEvent, updateEvent } from "../../service";
 import css from "./FormEvent.module.css";
 import closeIcon from "../../assets/cross.svg";

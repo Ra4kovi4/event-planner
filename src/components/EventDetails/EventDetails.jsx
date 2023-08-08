@@ -1,12 +1,11 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { fetchEventById, deleteEvent } from "../../service";
 import { useState, useEffect } from "react";
-import { Loader } from "../Loader";
+import { Loader } from "../Loader/Loader";
 
 import css from "../EventDetails/EventDetails.module.css";
 
 import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 export const EventDetails = () => {
 	const [event, setEvent] = useState(null);

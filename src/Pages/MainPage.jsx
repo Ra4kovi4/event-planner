@@ -1,11 +1,11 @@
 import { useEffect, useState, memo } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { EventsList } from "../components/EventsList";
-import { Loader } from "../components/Loader";
+import { EventsList } from "../components/EventsList/EventsList";
+import { Loader } from "../components/Loader/Loader";
 import { fetchEvents } from "../service";
-import { Container } from "../components/Container";
-import { NavBar } from "../components/NavBar";
+import { Container } from "../components/Container/Container";
+import { NavBar } from "../components/NavBar/NavBar";
 
 const MainPage = memo(() => {
 	const [events, setEvents] = useState([]);

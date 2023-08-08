@@ -1,7 +1,7 @@
-import { FormEvent } from "../components/FormEvent";
-import { Container } from "../components/Container";
-import { Title } from "../components/Title";
-import { BackButton } from "../components/BackButton";
+import { FormEvent } from "../components/FormEvent/FormEvent";
+import { Container } from "../components/Container/Container";
+import { Title } from "../components/Title/Title";
+import { BackButton } from "../components/BackButton/BackButton";
 
 const NewEventPage = () => {
 	return (

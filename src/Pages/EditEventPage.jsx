@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import { fetchEventById } from "../service";
 
 import { toast } from "react-toastify";
-import { FormEvent } from "../components/FormEvent";
-import { BackButton } from "../components/BackButton";
-import { Container } from "../components/Container";
+import { FormEvent } from "../components/FormEvent/FormEvent";
+import { BackButton } from "../components/BackButton/BackButton";
+import { Container } from "../components/Container/Container";
 
 const EditEventPage = () => {
 	const { id: eventId } = useParams();

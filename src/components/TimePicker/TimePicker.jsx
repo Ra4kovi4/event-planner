@@ -1,10 +1,10 @@
+import PropTypes from "prop-types";
 import { Space, TimePicker } from "antd";
 
-import PropTypes from "prop-types";
 import { useMedia } from "react-use";
 import "./TimePicker.css";
 import css from "./TimePicker.module.css";
-export const TimePickerComponent = ({ setFieldValue, onClose }) => {
+export const TimePickerComponent = ({ setFieldValue }) => {
 	const mobile = useMedia("(max-width: 767px)", { defaultState: false });
 	const tablet = useMedia("(min-width: 768px) and (max-width: 1439px)", {
 		defaultState: true,
@@ -13,7 +13,6 @@ export const TimePickerComponent = ({ setFieldValue, onClose }) => {
 
 	const onChange = (time, timeString) => {
 		setFieldValue("selectTime", timeString);
-		onClose();
 	};
 
 	const getPickerWidth = () => {

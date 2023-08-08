@@ -1,6 +1,6 @@
-import { SearchForm } from "../SearchForm";
+import { SearchForm } from "../SearchForm/SearchForm";
 import { Link } from "react-router-dom";
-import { ChangeLanguageForm } from "../ChangeLanguageForm";
+import { ChangeLanguageForm } from "../ChangeLanguageForm/ChangeLanguageForm";
 import css from "./Header.module.css";
 
 export const Header = () => {

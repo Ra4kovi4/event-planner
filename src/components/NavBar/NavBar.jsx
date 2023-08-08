@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import addIcon from "../../assets/plus.svg";
 import css from "./NavBar.module.css";
-import { Title } from "../Title";
+import { Title } from "../Title/Title";
 
 export const NavBar = () => {
 	return (

@@ -2,6 +2,7 @@ import { lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import { Layout } from "./components/Layout/Layout";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 
 const MainPage = lazy(() => import("./Pages/MainPage"));

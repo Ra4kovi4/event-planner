@@ -1,7 +1,7 @@
-import { EventDetails } from "../components/EventDetails";
+import { EventDetails } from "../components/EventDetails/EventDetails";
 
-import { BackButton } from "../components/BackButton";
-import { Container } from "../components/Container";
+import { BackButton } from "../components/BackButton/BackButton";
+import { Container } from "../components/Container/Container";
 const EventPage = () => {
 	return (
 		<>
