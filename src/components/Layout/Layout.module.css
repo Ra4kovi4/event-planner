@@ -1,7 +1,7 @@
 .container {
 	display: flex;
 	flex-direction: column;
-	min-height: 100%;
+
 	padding: 0 16px;
 	background-color: #fff;
 }
@@ -25,9 +25,9 @@
 }
 .main {
 	background: url("../../assets/background.png");
-	background-repeat: no-repeat;
-	background-position: left top;
-	background-attachment: fixed;
-	background-size: cover;
-	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: calc(100vh - 93px);
 }

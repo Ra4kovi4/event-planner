@@ -3,7 +3,7 @@ import css from "./Title.module.css";
 export const Title = ({ children }) => {
 	return (
 		<div className={css.mainTitleContainer}>
-			<h2 className={css.mainTitle}>{children}</h2>
+			<h1 className={css.title}>{children}</h1>
 		</div>
 	);
 };

@@ -17,7 +17,7 @@ import { priorities, categories } from "../../constants/data";
 export const FormEvent = ({ event = null }) => {
 	const [isCategoryActive, setIsCategoryActive] = useState(false);
 	const [isPriorityActive, setIsPriorityActive] = useState(false);
-
+	const [picture, setPicture] = useState(null);
 	const [startDate, setStartDate] = useState(new Date());
 
 	const [showDatePicker, setShowDatePicker] = useState(false);
@@ -26,6 +26,12 @@ export const FormEvent = ({ event = null }) => {
 	const inputRefPriority = useRef();
 
 	const navigate = useNavigate();
+
+	const handleFileChange = (e, setFieldValue) => {
+		const file = e.currentTarget.files[0];
+		setPicture(file);
+		setFieldValue("picture", file);
+	};
 
 	const toggleDataPicker = () => {
 		const form = document.getElementById("form");
@@ -131,12 +137,8 @@ export const FormEvent = ({ event = null }) => {
 										onChange={(e) => setFieldValue("title", e.target.value)}
 									/>
 								</label>
-								<ErrorMessage
-									name='title'
-									component='p'
-									className={css.error}
-								/>
 							</div>
+							<ErrorMessage name='title' component='p' className={css.error} />
 							<div className={css.enabled}>
 								<label htmlFor='description' className={css.label}>
 									<span className={css.inputTitle}>Description</span>
@@ -159,12 +161,12 @@ export const FormEvent = ({ event = null }) => {
 										}
 									/>
 								</label>
-								<ErrorMessage
-									name='description'
-									component='p'
-									className={css.error}
-								/>
 							</div>
+							<ErrorMessage
+								name='description'
+								component='p'
+								className={css.error}
+							/>
 							<div className={css.enabledTime}>
 								<label className={css.timeLabel}>
 									<span className={css.inputTitleTime}>Select Time</span>
@@ -176,13 +178,18 @@ export const FormEvent = ({ event = null }) => {
 									/>
 									<Field
 										value={values.selectTime}
-										id='selectDate'
-										name='selectDate'
+										id='selectTime'
+										name='selectTime'
 										className={css.timeInput}
 										placeholder='select time'
 									/>
 								</label>
 							</div>
+							<ErrorMessage
+								name='selectTime'
+								component='p'
+								className={css.errorMsg}
+							/>
 							<div className={css.enabled} style={{ position: "relative" }}>
 								<label className={css.label} htmlFor='selectDate'>
 									<span className={css.inputTitle}>Select Date</span>
@@ -200,6 +207,7 @@ export const FormEvent = ({ event = null }) => {
 										onClick={() => setShowDatePicker(true)}
 										style={{ caretColor: "transparent" }}
 									/>
+
 									<button
 										type='button'
 										className={css.inputBtn}
@@ -221,6 +229,11 @@ export const FormEvent = ({ event = null }) => {
 									</div>
 								)}
 							</div>
+							<ErrorMessage
+								name='selectDate'
+								component='p'
+								className={css.error}
+							/>
 							<div className={css.enabled}>
 								<label htmlFor='location' className={css.label}>
 									<span className={css.inputTitle}>Location</span>
@@ -233,21 +246,22 @@ export const FormEvent = ({ event = null }) => {
 									/>
 									<Field
 										name='location'
+										id='location'
 										type='text'
 										placeholder='Enter location'
 										className={css.input}
 										onChange={(e) => setFieldValue("location", e.target.value)}
 									/>
 								</label>
-								<ErrorMessage
-									name='location'
-									component='p'
-									className={css.error}
-								/>
 							</div>
+							<ErrorMessage
+								name='location'
+								component='p'
+								className={css.error}
+							/>
 							<div className={css.categoryWrapper}>
 								<span className={css.categoryTitle}>Category</span>
-								<input
+								<Field
 									className={css.input}
 									type='text'
 									name='category'
@@ -256,6 +270,7 @@ export const FormEvent = ({ event = null }) => {
 									placeholder='Category'
 									value={values.category || ""}
 								/>
+
 								<div
 									className={css.styledSelect}
 									ref={inputRefCategoty}
@@ -286,6 +301,12 @@ export const FormEvent = ({ event = null }) => {
 									</ul>
 								)}
 							</div>
+							<ErrorMessage
+								name='category'
+								component='p'
+								className={css.errorMsg}
+							/>
+
 							<div className={css.enabled}>
 								<label htmlFor='picture' className={css.pictureLabel}>
 									<span className={css.inputTitlePicture}>Add picture</span>
@@ -296,23 +317,22 @@ export const FormEvent = ({ event = null }) => {
 										onClick={() => setFieldValue("picture", "")}
 									/>
 									<div className={css.fakeInput}>
-										Add picture
-										<Field
-											type='text'
+										{!picture ? "Add picture" : picture.name}
+										<input
+											type='file'
 											id='picture'
 											name='picture'
-											disabled
 											className={css.inputPhoto}
+											onChange={handleFileChange}
 										/>
 									</div>
 								</label>
-								<ErrorMessage
-									name='picture'
-									component='p'
-									className={css.error}
-								/>
 							</div>
-
+							<ErrorMessage
+								name='picture'
+								component='p'
+								className={css.error}
+							/>
 							<div className={`${css.priorityWrapper} ${css.enabled}`}>
 								<span className={css.priorityTitle}>Priority</span>
 								<Field
@@ -322,6 +342,7 @@ export const FormEvent = ({ event = null }) => {
 									placeholder='priority'
 									value={values.priority || ""}
 								/>
+
 								<div
 									className={css.styledSelect}
 									ref={inputRefPriority}
@@ -351,7 +372,13 @@ export const FormEvent = ({ event = null }) => {
 									</ul>
 								)}
 							</div>
+							<ErrorMessage
+								name='priority'
+								component='p'
+								className={css.errorMsg}
+							/>
 						</div>
+
 						<button type='submit' className={css.submitBtn}>
 							{event ? "Save" : "Add event"}
 						</button>

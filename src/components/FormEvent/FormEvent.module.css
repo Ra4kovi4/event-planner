@@ -55,12 +55,12 @@ enabledTime {
 	font-size: 16px;
 	line-height: 1;
 	letter-spacing: 0.4px;
-	margin-bottom: 7px;
+	margin-bottom: 8px;
 	text-align: left;
 	margin-right: auto;
 }
 .inputTitleTime {
-	margin-bottom: 10px;
+	margin-bottom: 16px;
 }
 .input,
 .textArea,
@@ -73,7 +73,8 @@ enabledTime {
 }
 
 .input::placeholder,
-.textArea::placeholder {
+.textArea::placeholder,
+.timeInput::placeholder {
 	color: var(--placeholder-color);
 	font-size: 16px;
 	line-height: 1.5;
@@ -113,7 +114,9 @@ enabledTime {
 	position: relative;
 	cursor: pointer;
 }
-
+.categoryWrapper {
+	margin-bottom: 4px;
+}
 .styledSelect {
 	position: absolute;
 	display: flex;
@@ -238,12 +241,15 @@ enabledTime {
 	opacity: 0;
 	cursor: pointer;
 }
-.error {
+.error,
+.errorMsg {
 	font-size: 8px;
 	color: var(--high-color);
 	margin-left: auto;
-	margin-top: -10px;
-	margin-bottom: 0px;
+	margin-top: -21px;
+}
+.errorMsg {
+	margin-top: -21px;
 }
 .fakeInput {
 	display: flex;
@@ -257,6 +263,7 @@ enabledTime {
 	font-size: 16px;
 	line-height: 1.5;
 	align-items: center;
+	pointer-events: all;
 }
 .pictureLabel {
 	width: 100%;
@@ -289,9 +296,16 @@ enabledTime {
 	font-size: 16px;
 	line-height: 1;
 	letter-spacing: 0.4px;
-	margin-bottom: 7px;
+
 	margin-right: auto;
 	text-align: start;
+}
+.categoryTitle {
+	margin-bottom: 7px;
+}
+
+.priorityTitle {
+	margin-bottom: 8px;
 }
 .submitBtn {
 	display: flex;
@@ -337,10 +351,10 @@ enabledTime {
 }
 .timeSelectBtn {
 	position: absolute;
-	bottom: 0;
+	bottom: 4px;
 	right: 12px;
 	z-index: 1000;
 }
 .enabledTime {
-	margin-bottom: 20px;
+	margin-bottom: 14px;
 }

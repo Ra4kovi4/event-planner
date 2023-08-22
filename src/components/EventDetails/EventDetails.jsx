@@ -53,14 +53,12 @@ export const EventDetails = () => {
 				<>
 					<div className={css.cardWrapper}>
 						<div className={css.titleWrapper}>
-							<h3 className={css.title}>{event.title}</h3>
+							<h2 className={css.title}>{event.title}</h2>
 						</div>
 						<div className={css.card}>
 							<div className={css.pictureBox}>
 								<img
 									src={event.picture}
-									width='272'
-									height='296'
 									alt={event.title}
 									className={css.picture}
 								/>

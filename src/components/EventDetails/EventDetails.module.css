@@ -42,10 +42,21 @@
 }
 
 .picture {
-	width: 100%;
+	max-width: 100%;
+	width: 272px;
+	height: 168px;
 	border-top-left-radius: 12px;
 	border-top-right-radius: 12px;
 	object-fit: cover;
+
+	@media screen and (min-width: 768px) {
+		width: 688px;
+		height: 272px;
+	}
+
+	@media screen and (min-width: 1280px) {
+		width: 628px;
+	}
 }
 
 .categoryWrap {

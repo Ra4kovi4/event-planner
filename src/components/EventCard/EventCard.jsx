@@ -22,10 +22,11 @@ export const EventsCard = ({ event }) => {
 				</div>
 				<img
 					src={event.picture}
-					width='272'
-					height='296'
+					// width='272'
+					// height='296'
 					alt={event.title}
 					className={css.picture}
+					loading='lazy'
 				/>
 			</div>
 			<div
