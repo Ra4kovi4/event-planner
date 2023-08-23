@@ -1,6 +1,7 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "https://event-panner-service.onrender.com/api";
+axios.defaults.baseURL =
+	"https://damp-sierra-19444-ce61428c5941.herokuapp.com/api";
 
 export const fetchEvents = async () => {
 	try {

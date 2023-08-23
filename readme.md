@@ -2,7 +2,7 @@ EVENT PLANNER APP
 
 Built with Vite and React
 
-git clone <https://github.com/Ra4kovi4/eliftech_delivery-service-frontend.git>
+git clone <https://github.com/Ra4kovi4/event-planner.git>
 Install the project dependencies:
 
 npm install
