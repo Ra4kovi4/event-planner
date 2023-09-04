@@ -13,14 +13,13 @@
 	gap: 16px;
 	border-radius: 8px;
 	border: none;
-	color: var(--accent-color);
-
 	font-size: 16px;
 	font-weight: 500;
 	border-radius: 8px;
 	background-color: var(--background-color);
 	box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
-
+	color: var(--title-color);
+	transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1);
 	@media screen and (min-width: 768px) {
 		width: 100%;
 	}
@@ -29,11 +28,16 @@
 .sortButton:focus {
 	color: var(--hover-color);
 }
+.sortButton:hover .btnIcon,
+.sortButton:focus .btnIcon {
+	stroke: var(--hover-color);
+}
+
 .sortButtonTitle {
 	display: none;
 	margin: 0;
 	padding: 0;
-	color: var(--title-color);
+	color: inherit;
 	@media screen and (min-width: 768px) {
 		display: block;
 		font-size: 16px;
@@ -44,13 +48,19 @@
 .fakeSortButtonTitle {
 	margin: 0;
 	padding: 0;
+	color: var(--hover-color);
 	@media screen and (min-width: 768px) {
-		display: block;
+		display: flex;
+		align-items: center;
 		font-size: 16px;
-
+		gap: 16px;
 		font-weight: 500;
 	}
 }
+.fakeSortButtonTitle .btnIcon {
+	stroke: var(--hover-color);
+}
+
 .sortBtnIcon {
 	width: 24px;
 	height: 24px;
@@ -70,8 +80,10 @@
 }
 .sortDropdownWrapper {
 	display: flex;
+	align-items: center;
+	justify-content: center;
 	gap: 16px;
-	padding: 16px 21px;
+	padding: 16px;
 	border-bottom: 1px solid var(--placeholder-color);
 	color: var(--placeholder-color);
 }
@@ -87,17 +99,20 @@
 	justify-content: space-between;
 	cursor: pointer;
 	padding: 8px 24px;
-
+	color: var(--placeholder-color);
 	&:not(:last-child) {
 		border-bottom: 1px solid var(--placeholder-color);
 	}
 }
+.sortItem:nth-child(even) .sortArrowIcon {
+	transform: rotate(180deg);
+}
+
 .sortItem:hover,
 .sortItem:active {
 	color: var(--accent-color);
 }
 .sortSpan {
-	color: var(--placeholder-color);
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 1;
@@ -106,7 +121,14 @@
 .sortArrowIcon {
 	width: 24px;
 	height: 24px;
-	&:nth-child(2n) {
-		rotate: 50%;
-	}
+	stroke: #aca7c4;
+}
+.sortItem:hover .sortArrowIcon,
+.sortItem:active .sortArrowIcon {
+	stroke: var(--accent-color);
+}
+.btnIcon {
+	width: 24px;
+	height: 24px;
+	stroke: #3f3f3f;
 }

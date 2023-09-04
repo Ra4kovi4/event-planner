@@ -1,4 +1,4 @@
-export const priorities = ["High", "Low", "Medium"];
+export const priorities = ["High", "Medium", "Low"];
 export const categories = [
 	"Art",
 	"Business",
@@ -8,11 +8,12 @@ export const categories = [
 	"Party",
 	"Sport",
 ];
+
 export const sortingList = [
-	"by name",
-	"by name",
-	"by data",
-	"by data",
-	"by priority",
-	"by priority",
+	{ nameAsc: "by name" },
+	{ nameDesc: "by name" },
+	{ dateAsc: "by date" },
+	{ dateDesc: "by date" },
+	{ priorityAsc: "by priority" },
+	{ priorityDesc: "by priority" },
 ];

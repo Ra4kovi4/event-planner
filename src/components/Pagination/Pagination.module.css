@@ -1,0 +1,76 @@
+.paginationWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--background-color);
+	box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
+	width: 100%;
+	border-radius: 8px;
+	padding: 10px;
+	margin: 0 auto 0 auto;
+	@media screen and (min-width: 768px) {
+		width: 688px;
+	}
+	@media screen and (min-width: 1280px) {
+		width: 588px;
+		margin: 0 0 0 auto;
+	}
+}
+.pagination {
+	display: grid;
+	grid-auto-flow: column;
+
+	align-items: center;
+	justify-content: center;
+	@media screen and (min-width: 768px) {
+		gap: 40px;
+	}
+	@media screen and (min-width: 1280px) {
+		gap: 20px;
+	}
+}
+.pageItem,
+.prevItem {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	font-size: 18px;
+	@media screen and (min-width: 768px) {
+		width: 64px;
+		height: 64px;
+	}
+}
+.arrowLink {
+	color: #aca7c3;
+	transition: color 2000 cubic-bezier();
+	cursor: pointer;
+}
+
+.arrowLink:hover,
+.arrowLink:focus {
+	color: var(--accent-color);
+}
+.prevItem:hover,
+.pageItem:focus {
+	color: var(--accent-color);
+}
+
+.pageLink {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	color: #aca7c3;
+	font-weight: 800;
+	transition: color 2000 cubic-bezier();
+}
+
+.pageItem.active > .pageLink {
+	color: var(--accent-color);
+}
+.pageLink:hover,
+.pageLink:focus {
+	color: var(--accent-color);
+}

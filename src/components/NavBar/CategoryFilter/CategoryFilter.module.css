@@ -16,13 +16,14 @@
 	gap: 16px;
 	border-radius: 8px;
 	border: none;
-	color: var(--accent-color);
+	color: #3f3f3f;
 
 	font-size: 16px;
 	font-weight: 500;
 	border-radius: 8px;
 	background-color: var(--background-color);
 	box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
+	transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1);
 
 	@media screen and (min-width: 768px) {
 		width: 100%;
@@ -32,14 +33,23 @@
 .categoryButton:focus {
 	color: var(--hover-color);
 }
+.btnIcon {
+	width: 24px;
+	height: 24px;
+	stroke: #3f3f3f;
+}
+.categoryButton:hover .btnIcon,
+.btnIcon:focus .btnIcon {
+	stroke: var(--hover-color);
+}
 .categoryButtonTitle {
 	display: none;
 	margin: 0;
 	padding: 0;
 	@media screen and (min-width: 768px) {
-		display: block;
-		font-size: 16px;
+		display: flex;
 
+		font-size: 16px;
 		font-weight: 500;
 	}
 }
@@ -48,36 +58,42 @@
 	margin: 0;
 	padding: 0;
 	@media screen and (min-width: 768px) {
-		display: block;
+		display: flex;
+		align-items: center;
 		font-size: 16px;
+		gap: 16px;
 
 		font-weight: 500;
 	}
 }
-.categoryBtnIcon {
-	width: 24px;
-	height: 24px;
-}
+
 .categoryDropdown {
 	width: 158px;
 	position: absolute;
 	display: flex;
 	flex-direction: column;
-	gap: 4px;
-
 	top: 0;
 	z-index: 99;
 	background-color: var(--background-color);
 	border-radius: 8px;
 	box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+	@media screen and (min-width: 1280px) {
+		width: 143px;
+	}
 }
 .categoryDropdownWrapper {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	gap: 16px;
-	padding: 16px 21px;
+	padding: 16px;
 	border-bottom: 1px solid var(--placeholder-color);
 	color: var(--placeholder-color);
 }
+.categoryDropdownWrapper .btnIcon {
+	stroke: var(--hover-color);
+}
+
 .categoryDropdownList {
 	display: flex;
 	width: 100%;

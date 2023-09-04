@@ -175,10 +175,16 @@
 
 	font-weight: 500;
 	line-height: 1.43;
+	transition: background-color 2000ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
 .infoBtn:hover,
 .infoBtn:focus {
+	background-color: var(--hover-color);
+}
+.infoBtn:hover,
+.infoBtn:focus,
+.deleteBtn:hover,
+.deleteBtn:focus {
 	background-color: var(--hover-color);
 }
 .buttonContainer {
@@ -205,9 +211,17 @@
 	line-height: 1.33;
 	margin-right: 24px;
 	border: 1px solid var(--accent-color);
+	background-color: var(--button-text-color);
+	transition: background-color 2000ms cubic-bezier(0.4, 0, 0.2, 1);
 	@media screen and (min-width: 768px) {
 		width: 55px;
 		margin-right: 16px;
 		margin-left: auto;
 	}
+}
+.editBtn:hover,
+.editBtn:focus {
+	color: var(--button-text-color);
+	background-color: var(--hover-color);
+	border: 1px solid var(--button-text-color);
 }

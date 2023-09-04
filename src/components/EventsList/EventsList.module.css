@@ -3,7 +3,7 @@
 	width: 100%;
 	gap: 24px;
 	justify-content: center;
-
+	margin-bottom: 40px;
 	@media screen and (min-width: 768px) {
 		grid-template-columns: 332px 332px;
 	}

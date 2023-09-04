@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import filterIcon from "../../../assets/filter.svg";
+import { ReactComponent as FilterIcon } from "../../../assets/filter.svg";
 
 import css from "./CategoryFilter.module.css";
 
@@ -20,22 +20,25 @@ export const CategoryFilter = ({ onSelect }) => {
 	const [activeCategory, setActiveCategory] = useState("");
 
 	const handleClick = () => {
-		setShowCategoryList(!showCategoryList);
+		setShowCategoryList((prev) => !prev);
 	};
 
 	return (
-		<div className={css.categoryWrap}>
-			<button className={css.categoryButton} onClick={handleClick}>
+		<div className={css.categoryWrap} onClick={handleClick}>
+			<button className={css.categoryButton} aria-label='filter'>
 				<span className={css.categoryButtonTitle}>
 					{activeCategory || "Category"}
 				</span>
-				<img className={css.categoryBtnIcon} src={filterIcon} />
+				<FilterIcon className={css.btnIcon} />
 			</button>
 			{showCategoryList && (
 				<div className={css.categoryDropdown}>
 					<div className={css.categoryDropdownWrapper}>
-						<button className={css.fakeCategoryButtonTitle}>Category</button>
-						<img className={css.categoryBtnIcon} src={filterIcon} />
+						<button className={css.fakeCategoryButtonTitle}>
+							<span>Category</span>
+
+							<FilterIcon className={css.btnIcon} />
+						</button>
 					</div>
 					<ul className={css.categoryDropdownList}>
 						{categories.map((category) => (
@@ -46,6 +49,7 @@ export const CategoryFilter = ({ onSelect }) => {
 									setShowCategoryList(false);
 									setActiveCategory(category);
 									onSelect(category);
+									handleClick();
 								}}>
 								{category}
 							</li>

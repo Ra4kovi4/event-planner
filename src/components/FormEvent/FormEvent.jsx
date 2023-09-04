@@ -4,14 +4,13 @@ import { useNavigate } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { DatePicker } from "../Calendar/Calendar";
 import { addEventSchema } from "../../constants/addEventSchema";
-import { convertDateFormat } from "../../helpers";
+import { convertDateFormat, createFormData } from "../../helpers";
 import { TimePickerComponent } from "../TimePicker/TimePicker";
 import { addEvent, updateEvent } from "../../service";
 import css from "./FormEvent.module.css";
-import closeIcon from "../../assets/cross.svg";
+import { ReactComponent as CloseIcon } from "../../assets/cross.svg";
 import { toast } from "react-toastify";
-import arrowIcon from "../../assets/arrow.svg";
-import crossGryeIcon from "../../assets/crossgrey.svg";
+import { ReactComponent as ArrowIcon } from "../../assets/arrow.svg";
 import { priorities, categories } from "../../constants/data";
 
 export const FormEvent = ({ event = null }) => {
@@ -78,9 +77,10 @@ export const FormEvent = ({ event = null }) => {
 	};
 
 	const handleFormSubmit = async (values, { resetForm }) => {
+		const data = createFormData(values);
 		if (!event) {
 			try {
-				await addEvent(values);
+				await addEvent(data);
 				resetForm();
 
 				navigate("/");
@@ -90,7 +90,7 @@ export const FormEvent = ({ event = null }) => {
 			}
 		} else {
 			try {
-				await updateEvent(event._id, values);
+				await updateEvent(event._id, data);
 				toast.success("Event successfully updated");
 				navigate(`/events/${event._id}`);
 			} catch (error) {
@@ -121,12 +121,12 @@ export const FormEvent = ({ event = null }) => {
 							<div className={css.enabled}>
 								<label htmlFor='title' className={css.label}>
 									<span className={css.inputTitle}>Title</span>
-									<img
-										src={closeIcon}
-										alt='Close'
+									<CloseIcon
 										className={css.closeIcon}
 										onClick={() => setFieldValue("title", "")}
+										aria-label='remove title'
 									/>
+
 									<Field
 										name='title'
 										type='text'
@@ -142,11 +142,10 @@ export const FormEvent = ({ event = null }) => {
 							<div className={css.enabled}>
 								<label htmlFor='description' className={css.label}>
 									<span className={css.inputTitle}>Description</span>
-									<img
-										src={closeIcon}
-										alt='Close'
+									<CloseIcon
 										className={css.closeIconTextArea}
 										onClick={() => setFieldValue("description", "")}
+										aria-label='remove description'
 									/>
 									<Field
 										name='description'
@@ -170,7 +169,10 @@ export const FormEvent = ({ event = null }) => {
 							<div className={css.enabledTime}>
 								<label className={css.timeLabel}>
 									<span className={css.inputTitleTime}>Select Time</span>
-									<img src={arrowIcon} className={css.timeSelectBtn} />
+									<ArrowIcon
+										className={css.timeSelectBtn}
+										aria-label='select time'
+									/>
 
 									<TimePickerComponent
 										handleSaveTime={handleSaveTime}
@@ -213,7 +215,7 @@ export const FormEvent = ({ event = null }) => {
 										className={css.inputBtn}
 										style={{ width: "92%", justifyContent: "right" }}
 										onClick={toggleDataPicker}>
-										<img src={arrowIcon} />
+										<ArrowIcon aria-label='select date' />
 									</button>
 								</label>
 
@@ -237,13 +239,12 @@ export const FormEvent = ({ event = null }) => {
 							<div className={css.enabled}>
 								<label htmlFor='location' className={css.label}>
 									<span className={css.inputTitle}>Location</span>
-									<img
-										src={closeIcon}
-										alt='Close'
+									<CloseIcon
 										className={css.closeIcon}
-										value={values.location}
 										onClick={() => setFieldValue("location", "")}
+										aria-label='remove location'
 									/>
+
 									<Field
 										name='location'
 										id='location'
@@ -275,7 +276,12 @@ export const FormEvent = ({ event = null }) => {
 									className={css.styledSelect}
 									ref={inputRefCategoty}
 									onClick={handleCategoryClick}>
-									<img src={arrowIcon} alt='arrow' className={css.arrowIcon} />
+									<span className={css.selectPart}>
+										<ArrowIcon
+											aria-label='select category'
+											className={css.arrowIcon}
+										/>
+									</span>
 								</div>
 								{isCategoryActive && (
 									<ul className={css.selectContainer}>
@@ -284,11 +290,8 @@ export const FormEvent = ({ event = null }) => {
 												key={idx}
 												className={css.selectItem}
 												style={{
-													backgroundColor:
-														values.category === item
-															? "var(--accent-color)"
-															: "white",
-													color: values.category === item ? "white" : "black",
+													color:
+														values.category === item && "var(--accent-color)",
 												}}
 												value={values.category}
 												onClick={() => {
@@ -309,13 +312,13 @@ export const FormEvent = ({ event = null }) => {
 
 							<div className={css.enabled}>
 								<label htmlFor='picture' className={css.pictureLabel}>
-									<span className={css.inputTitlePicture}>Add picture</span>
-									<img
-										src={crossGryeIcon}
-										alt='Close'
+									<span className={css.inputTitle}>Add picture</span>
+									<CloseIcon
+										aria-label='remove picture'
 										className={css.closeIcon}
 										onClick={() => setFieldValue("picture", "")}
 									/>
+
 									<div className={css.fakeInput}>
 										{!picture ? "Add picture" : picture.name}
 										<input
@@ -323,7 +326,8 @@ export const FormEvent = ({ event = null }) => {
 											id='picture'
 											name='picture'
 											className={css.inputPhoto}
-											onChange={handleFileChange}
+											onChange={(e) => handleFileChange(e, setFieldValue)}
+											aria-label='Upload a picture'
 										/>
 									</div>
 								</label>
@@ -347,7 +351,12 @@ export const FormEvent = ({ event = null }) => {
 									className={css.styledSelect}
 									ref={inputRefPriority}
 									onClick={handlePriorityClick}>
-									<img src={arrowIcon} alt='arrow' className={css.arrowIcon} />
+									<span className={css.selectPart}>
+										<ArrowIcon
+											className={css.arrowIcon}
+											aria-label='select priority'
+										/>
+									</span>
 								</div>
 								{isPriorityActive && (
 									<ul className={css.selectContainer}>
@@ -356,11 +365,8 @@ export const FormEvent = ({ event = null }) => {
 												key={idx}
 												className={css.selectItem}
 												style={{
-													backgroundColor:
-														values.priority === pr
-															? "var(--accent-color)"
-															: "white",
-													color: values.priority === pr ? "white" : "black",
+													color:
+														values.priority === pr && "var(--accent-color)",
 												}}
 												onClick={() => {
 													setFieldValue("priority", pr);

@@ -1,11 +1,12 @@
 import { defineConfig } from "vite";
 import reactRefresh from "@vitejs/plugin-react-refresh";
 import react from "@vitejs/plugin-react";
+import svgr from "vite-plugin-svgr";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [react(), reactRefresh()],
-	base: "/",
+	plugins: [svgr(), react(), reactRefresh()],
+	base: "/event-planner",
 	build: {
 		rollupOptions: {
 			output: {
@@ -14,5 +15,9 @@ export default defineConfig({
 				},
 			},
 		},
+	},
+	esbuild: {
+		jsxFactory: "h",
+		jsxFragment: "Fragment",
 	},
 });

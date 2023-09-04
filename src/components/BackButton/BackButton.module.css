@@ -17,3 +17,10 @@
 .back_link:focus {
 	color: var(--hover-color);
 }
+.backBtn {
+	stroke: #7b61ff;
+}
+.back_link:hover .backBtn,
+.back_link:focus .backBtn {
+	stroke: var(--hover-color);
+}

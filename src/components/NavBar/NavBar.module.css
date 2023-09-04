@@ -67,7 +67,7 @@
 
 .addButton:hover,
 .addButton:focus {
-	background-color: var(--accent-color);
+	background-color: var(--hover-color);
 }
 
 .addButtonText {
