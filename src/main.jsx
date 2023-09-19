@@ -1,16 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import App from "./App.jsx";
-import { EventProvider } from "./components/EventContext/EventProvider.jsx";
-import "./index.css";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App.jsx';
+import { EventProvider } from './components/EventContext/EventProvider.jsx';
+import './index.css';
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-	// <React.StrictMode>
-	<BrowserRouter basename='/event-planner/events'>
-		<EventProvider>
-			<App />
-		</EventProvider>
-	</BrowserRouter>
-	// </React.StrictMode>
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <BrowserRouter basename="/">
+      <EventProvider>
+        <App />
+      </EventProvider>
+    </BrowserRouter>
+  </React.StrictMode>
 );
