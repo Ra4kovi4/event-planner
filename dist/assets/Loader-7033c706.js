@@ -1,0 +1,1 @@
+import{j as e}from"./index-cd85426c.js";import{T as t}from"./Container-42003893.js";const a=()=>e.jsx(t,{height:"50",width:"50",radius:"9",color:"#6213ebea",ariaLabel:"three-dots-loading",wrapperStyle:{display:"flex",justifyContent:"center",alignItems:"center"}});export{a as L};
