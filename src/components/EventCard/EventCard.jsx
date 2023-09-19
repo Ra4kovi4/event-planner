@@ -40,7 +40,7 @@ export const EventsCard = ({ event }) => {
 				<div className={css.info}>
 					<h2 className={css.title}>{event.title}</h2>
 					<p className={css.description}>{event.description} </p>
-					<Link to={`events/${event._id}`} className={css.infoBtn}>
+					<Link to={`/${event._id}`} className={css.infoBtn}>
 						More info
 					</Link>
 				</div>

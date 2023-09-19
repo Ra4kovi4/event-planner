@@ -12,6 +12,9 @@ import { ReactComponent as CloseIcon } from "../../assets/cross.svg";
 import { toast } from "react-toastify";
 import { ReactComponent as ArrowIcon } from "../../assets/arrow.svg";
 import { priorities, categories } from "../../constants/data";
+import { useEventContext } from "../EventContext/EventContex";
+import { EventContext } from "../EventContext/EventProvider";
+import { RotatingLines } from "react-loader-spinner";
 
 export const FormEvent = ({ event = null }) => {
 	const [isCategoryActive, setIsCategoryActive] = useState(false);
@@ -25,6 +28,7 @@ export const FormEvent = ({ event = null }) => {
 	const inputRefPriority = useRef();
 
 	const navigate = useNavigate();
+	const { isLoading, getEvents, setIsLoading } = useEventContext(EventContext);
 
 	const handleFileChange = (e, setFieldValue) => {
 		const file = e.currentTarget.files[0];
@@ -77,6 +81,7 @@ export const FormEvent = ({ event = null }) => {
 	};
 
 	const handleFormSubmit = async (values, { resetForm }) => {
+		setIsLoading(true);
 		const data = createFormData(values);
 		if (!event) {
 			try {
@@ -87,16 +92,21 @@ export const FormEvent = ({ event = null }) => {
 				toast.success("Event successfully created");
 			} catch (error) {
 				toast.error("Something went wrong");
+			} finally {
+				setIsLoading(false);
 			}
 		} else {
 			try {
 				await updateEvent(event._id, data);
 				toast.success("Event successfully updated");
-				navigate(`/events/${event._id}`);
+				navigate(`/${event._id}`);
 			} catch (error) {
 				toast.error("Something went wrong");
+			} finally {
+				setIsLoading(false);
 			}
 		}
+		getEvents();
 	};
 
 	return (
@@ -320,7 +330,11 @@ export const FormEvent = ({ event = null }) => {
 									/>
 
 									<div className={css.fakeInput}>
-										{!picture ? "Add picture" : picture.name}
+										<span className={css.fakeInputPart}>
+											{!picture
+												? "Add picture"
+												: `${picture.name.slice(0, 15)}...`}
+										</span>
 										<input
 											type='file'
 											id='picture'
@@ -387,6 +401,16 @@ export const FormEvent = ({ event = null }) => {
 
 						<button type='submit' className={css.submitBtn}>
 							{event ? "Save" : "Add event"}
+							{isLoading && (
+								<span className={css.btnLoader}>
+									<RotatingLines
+										strokeColor='#fff'
+										animationDuration='0.75'
+										width='35'
+										visible={true}
+									/>
+								</span>
+							)}
 						</button>
 					</Form>
 				);

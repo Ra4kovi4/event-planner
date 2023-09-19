@@ -1,17 +1,29 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
+
 import { fetchEventById, deleteEvent } from "../../service";
 import { useState, useEffect } from "react";
 import { Loader } from "../Loader/Loader";
-
+import { useEventContext } from "../EventContext/EventContex";
+import { EventContext } from "../EventContext/EventProvider";
 import css from "../EventDetails/EventDetails.module.css";
 
 import { toast } from "react-toastify";
 
 export const EventDetails = () => {
 	const [event, setEvent] = useState(null);
-	const [isLoading, setIsLoading] = useState(false);
+
 	const { id } = useParams();
 	const navigate = useNavigate();
+
+	const {
+		events,
+		isLoading,
+		page,
+		totalPage,
+		setIsLoading,
+		getEvents,
+		updatePage,
+	} = useEventContext(EventContext);
 
 	useEffect(() => {
 		getEventById(id);
@@ -25,25 +37,37 @@ export const EventDetails = () => {
 		} catch (error) {
 			toast.error("Oops, something went wrong! Please try again later", {
 				position: "top-right",
-				autoClose: 2000,
+				autoClose: 1000,
 			});
 		} finally {
 			setIsLoading(false);
 		}
 	};
 
-	const deleteEventById = async (id) => {
+	const deleteEventById = async () => {
+		setIsLoading(true);
 		try {
 			await deleteEvent(id);
+
 			setEvent(null);
 			toast.success("The event was successfully deleted ");
 		} catch (error) {
 			toast.error("Something went wrong, please try again");
+		} finally {
+			setIsLoading(false);
+			getEvents();
 		}
 	};
-	const clickHandler = () => {
-		deleteEventById(id);
-		navigate("/");
+
+	const clickHandler = async () => {
+		await deleteEventById();
+
+		if (events.length === 1 && totalPage > 1 && page > 1) {
+			updatePage(page - 1);
+			navigate(`/?page=${page - 1}`);
+		} else {
+			navigate(`/?page=${page}`);
+		}
 	};
 
 	return (
@@ -84,9 +108,10 @@ export const EventDetails = () => {
 									<button
 										className={css.editBtn}
 										type='button'
-										onClick={() => navigate(`/events/${event._id}/edit`)}>
+										onClick={() => navigate(`/${event._id}/edit`)}>
 										Edit
 									</button>
+
 									<button
 										className={css.deleteBtn}
 										type='button'

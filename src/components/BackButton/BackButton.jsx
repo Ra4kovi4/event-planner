@@ -1,14 +1,19 @@
-import { NavLink } from "react-router-dom";
+import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 import { ReactComponent as BackIcon } from "../../assets/back.svg";
 import css from "./BackButton.module.css";
 
-export const BackButton = () => {
+export const BackButton = ({ onBack }) => {
 	return (
 		<div className={css.button_container}>
-			<NavLink className={css.back_link} to='/'>
+			<button className={css.back_link} onClick={onBack}>
 				<BackIcon className={css.backBtn} aria-label='back icon' />
 				<span>Back</span>
-			</NavLink>
+			</button>
 		</div>
 	);
+};
+
+BackButton.propTypes = {
+	onBack: PropTypes.func.isRequired,
 };

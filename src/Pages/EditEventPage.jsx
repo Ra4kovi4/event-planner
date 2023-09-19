@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { fetchEventById } from "../service";
 import { Title } from "../components/Title/Title";
 import { toast } from "react-toastify";
@@ -8,10 +9,10 @@ import { BackButton } from "../components/BackButton/BackButton";
 import { Container } from "../components/Container/Container";
 
 const EditEventPage = () => {
+	const [event, setEvent] = useState(null);
 	const { id: eventId } = useParams();
 
-	const [event, setEvent] = useState(null);
-
+	const navigate = useNavigate();
 	const getEventById = async (id) => {
 		try {
 			const fetchedEvent = await fetchEventById(id);
@@ -28,10 +29,14 @@ const EditEventPage = () => {
 		getEventById(eventId);
 	}, [eventId]);
 
+	const backHandler = () => {
+		navigate(-1);
+	};
+
 	return (
 		<>
 			<Container>
-				<BackButton />
+				<BackButton onBack={backHandler} />
 				<Title>Edit event</Title>
 				{event && <FormEvent isEdit={true} event={event} />}
 			</Container>

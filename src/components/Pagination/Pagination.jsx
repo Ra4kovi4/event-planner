@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import ReactPaginate from "react-paginate";
+
 import css from "./Pagination.module.css";
 export const Pagination = ({ pageCount, forcePage, onChange }) => {
 	return (
@@ -20,7 +21,7 @@ export const Pagination = ({ pageCount, forcePage, onChange }) => {
 					onPageChange={onChange}
 					containerClassName={css.pagination}
 					activeClassName={css.active}
-					forcePage={forcePage - 1}
+					forcePage={forcePage <= pageCount ? forcePage - 1 : 0}
 					pageLinkClassName={css.pageLink}
 					pageClassName={css.pageItem}
 					renderOnZeroPageCount={null}

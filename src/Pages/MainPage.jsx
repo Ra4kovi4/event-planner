@@ -1,59 +1,63 @@
-import { useEffect, useState, memo, useCallback } from "react";
+import { useEffect, useState } from "react";
 import { priorities } from "../constants/data";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 
+import queryString from "query-string";
+import { animateScroll as scroll } from "react-scroll";
 import { parseDate, calculateLimit } from "../helpers";
 import { Pagination } from "../components/Pagination/Pagination";
 import { NotFound } from "../components/NotFound/NotFound";
 import { EventsList } from "../components/EventsList/EventsList";
 import { Loader } from "../components/Loader/Loader";
-import { fetchEvents, filterEvents } from "../service";
+import { useEventContext } from "../components/EventContext/EventContex";
+import { EventContext } from "../components/EventContext/EventProvider";
 import { Container } from "../components/Container/Container";
 import { NavBar } from "../components/NavBar/NavBar";
 
-const MainPage = memo(() => {
-	const [events, setEvents] = useState([]);
-	const [isLoading, setIsLoading] = useState(false);
-	const [selectedCategory, setSelectedCategory] = useState("");
+const MainPage = () => {
 	const [sortType, setSortType] = useState("nameAsc");
-	const [totalPage, setTotalPage] = useState(1);
-	const [page, setPage] = useState(1);
-	const [maxCardsInCategory, setMaxCardsInCategory] = useState(0);
-	const [filterSet, setFilterSet] = useState(false);
+	const { pathname, search } = useLocation();
+	const [searchParams] = useSearchParams(search);
+	const {
+		events,
+		isLoading,
+		page,
+		maxCardsInCategory,
+		selectedCategory,
+		totalPage,
+		setSelectedCategory,
+		setFilterSet,
+		updatePage,
+		updateTotalPage,
+	} = useEventContext(EventContext);
 
-	const getEvents = useCallback(async () => {
-		const limitPage = calculateLimit();
-		try {
-			if (limitPage !== undefined) {
-				const { data, total } = await (filterSet
-					? filterEvents(page, limitPage, selectedCategory)
-					: fetchEvents(page, limitPage));
-
-				setEvents(data);
-				setMaxCardsInCategory(data.maxCardsInCategory);
-				setTotalPage(Math.ceil(Number(total) / limitPage));
-			}
-		} catch (error) {
-			toast.error("Oops, something went wrong! Please try again later", {
-				position: "top-right",
-				autoClose: 2000,
-			});
-		} finally {
-			setIsLoading(false);
-		}
-	}, [page, selectedCategory, filterSet]);
+	const navigate = useNavigate();
 
 	useEffect(() => {
-		setIsLoading(true);
-		getEvents();
-	}, [getEvents]);
+		const initialPage = queryString.parse(search).page
+			? Number(queryString.parse(search).page)
+			: 1;
+
+		if (!search.includes("page")) {
+			searchParams.set("page", "1");
+		} else {
+			searchParams.set("page", initialPage.toString());
+
+			updatePage(initialPage);
+		}
+		navigate(`${pathname}?${searchParams.toString()}`);
+	}, [pathname, search, navigate]);
+
+	const handleChangePage = (e) => {
+		const newPage = e.selected + 1;
+		searchParams.set("page", newPage.toString());
+		updatePage(newPage);
+		navigate(`?${searchParams.toString()}`);
+		scroll.scrollToTop();
+	};
 
 	const handleSortChange = (newSortType) => {
 		setSortType(newSortType);
-	};
-	const handleChangePage = (e) => {
-		setPage(e.selected + 1);
 	};
 	const sortEvents = (events) => {
 		switch (sortType) {
@@ -109,7 +113,7 @@ const MainPage = memo(() => {
 		const pageLimit = calculateLimit();
 		const maxCards = Math.min(filteredEvents.length, maxCardsInCategory);
 
-		setTotalPage(Math.ceil(Number(maxCards) / pageLimit));
+		updateTotalPage(Math.ceil(Number(maxCards) / pageLimit));
 	};
 
 	const filteredAndSortedEvents = sortEvents(events);
@@ -138,7 +142,7 @@ const MainPage = memo(() => {
 			</Container>
 		</>
 	);
-});
+};
 
 MainPage.displayName = "MainPage";
 export default MainPage;

@@ -2,6 +2,7 @@
 	width: 70px;
 	margin-right: 8px;
 	margin-bottom: 25px;
+	padding: 0;
 }
 
 .back_link {
@@ -10,8 +11,9 @@
 	justify-content: space-between;
 	text-decoration: none;
 	color: var(--accent-color);
-
+	background-color: transparent;
 	font-size: inherit;
+	padding: 0;
 }
 .back_link:hover,
 .back_link:focus {
@@ -19,6 +21,7 @@
 }
 .backBtn {
 	stroke: #7b61ff;
+	margin-right: 5px;
 }
 .back_link:hover .backBtn,
 .back_link:focus .backBtn {
