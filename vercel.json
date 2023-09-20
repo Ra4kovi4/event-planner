@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/events/:path*",
+      "destination": "/events/index.html"
+    },
+    {
+      "source": "/events/assets/:path*",
+      "destination": "/events/assets/:path*"
+    }
+  ]
+}

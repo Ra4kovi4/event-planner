@@ -44,9 +44,10 @@ const MainPage = () => {
 
     if (!search.includes('page')) {
       searchParams.set('page', '1');
+      console.log(searchParams.get('page'));
     } else {
       searchParams.set('page', initialPage.toString());
-
+      console.log(searchParams.get('page'));
       updatePage(initialPage);
     }
     navigate(`${pathname}?${searchParams.toString()}`);
