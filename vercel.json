@@ -7,6 +7,10 @@
     {
       "source": "/events/assets/:path*",
       "destination": "/events/assets/:path*"
+    },
+    {
+      "source": "/events/:path*",
+      "destination": "/events/index.html"
     }
   ]
 }
