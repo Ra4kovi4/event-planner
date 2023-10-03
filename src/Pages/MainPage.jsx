@@ -15,11 +15,12 @@ const MainPage = () => {
     const { pathname, search } = useLocation();
 
     const [searchParams] = useSearchParams(search);
-    const { events, isLoading, page, selectedCategory, totalPage, updatePage } =
+    const { events, isLoading, page, totalPage, updatePage } =
         useEventContext(EventContext);
 
     const navigate = useNavigate();
 
+    //When loading a page, a page is added to the search bar to match the pagination.
     useEffect(() => {
         const initialPage = queryString.parse(search).page
             ? Number(queryString.parse(search).page)
