@@ -1,30 +1,19 @@
-import PropTypes from "prop-types";
-import { EventsCard } from "../EventCard/EventCard";
-import css from "./EventsList.module.css";
-export const EventsList = ({ events }) => {
-	return (
-		<div>
-			<ul className={css.eventsList}>
-				{events.map((event) => {
-					return <EventsCard event={event} key={event._id} />;
-				})}
-			</ul>
-		</div>
-	);
-};
+import { EventsCard } from '../EventCard/EventCard';
+import { EventContext } from '../EventProvider/EventProvider';
+import { useEventContext, sortEvents } from '../../helpers';
+import css from './EventsList.module.css';
+export const EventsList = () => {
+    const { events, sortType } = useEventContext(EventContext);
 
-EventsList.propTypes = {
-	events: PropTypes.arrayOf(
-		PropTypes.shape({
-			_id: PropTypes.string.isRequired,
-			title: PropTypes.string.isRequired,
-			description: PropTypes.string.isRequired,
-			selectTime: PropTypes.string.isRequired,
-			selectDate: PropTypes.string.isRequired,
-			location: PropTypes.string.isRequired,
-			category: PropTypes.string.isRequired,
-			picture: PropTypes.string.isRequired,
-			priority: PropTypes.string.isRequired,
-		})
-	).isRequired,
+    const filteredAndSortedEvents = sortEvents(events, sortType);
+
+    return (
+        <div>
+            <ul className={css.eventsList}>
+                {filteredAndSortedEvents.map(event => {
+                    return <EventsCard event={event} key={event._id} />;
+                })}
+            </ul>
+        </div>
+    );
 };

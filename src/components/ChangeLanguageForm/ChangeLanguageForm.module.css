@@ -1,12 +1,44 @@
 .select {
-	display: flex;
-	align-items: center;
-	padding: 12px 4px 12px 12px;
-	width: 69px;
-	border-radius: 8px;
-	border: none;
-	box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
-	gap: 4px;
-	font-size: 16px;
-	color: #3f3f3f;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 12px 4px 12px 12px;
+    width: 69px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
+    gap: 4px;
+    font-size: 16px;
+    color: #3f3f3f;
+}
+.selectContainer {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 5;
+    width: 100%;
+    background-color: var(--background-color);
+    padding: 8px 14px;
+
+    border-radius: 6px;
+    font-size: 12px;
+    box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
+
+    @media screen and (min-width: 768px) {
+        padding: 8px 18px;
+    }
+}
+.selectItem {
+    padding: 8px 0;
+    font-size: 16px;
+    color: #3f3f3f;
+    color: var(--title-color);
+}
+
+.selectItem:not(:last-child) {
+    border-bottom: 1px solid var(--placeholder-color);
+}
+.selectItem:hover,
+.selectItem:focus {
+    color: var(--hover-color);
 }

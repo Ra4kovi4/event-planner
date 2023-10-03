@@ -1,22 +1,22 @@
-export const convertDateFormat = (inputDate) => {
-	const parsedDate = new Date(inputDate);
+export const convertDateFormat = inputDate => {
+    const parsedDate = new Date(inputDate);
 
-	const day = parsedDate.getDate().toString().padStart(2, "0");
-	const month = (parsedDate.getMonth() + 1).toString().padStart(2, "0");
-	const year = parsedDate.getFullYear();
+    const day = parsedDate.getDate().toString().padStart(2, '0');
+    const month = (parsedDate.getMonth() + 1).toString().padStart(2, '0');
+    const year = parsedDate.getFullYear();
 
-	const formattedDate = `${day}.${month}.${year}`;
+    const formattedDate = `${day}.${month}.${year}`;
 
-	return formattedDate;
+    return formattedDate;
 };
 
-export const adjustDate = (date) => {
-	const dateParts = date.split(".");
+export const adjustDate = date => {
+    const dateParts = date.split('.');
 
-	const day = dateParts[0];
-	const month = dateParts[1];
+    const day = dateParts[0];
+    const month = dateParts[1];
 
-	const reformattedDate = `${day}.${month}`;
+    const reformattedDate = `${day}.${month}`;
 
-	return reformattedDate;
+    return reformattedDate;
 };

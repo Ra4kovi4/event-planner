@@ -1,28 +1,45 @@
-import { useState } from "react";
-
-import css from "./ChangeLanguageForm.module.css";
+import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import { ReactComponent as ArrowIcon } from '../../assets/arrow.svg';
+import { EventContext } from '../EventProvider/EventProvider';
+import { useEventContext } from '../../helpers';
+import css from './ChangeLanguageForm.module.css';
 
 export const ChangeLanguageForm = () => {
-	const [contactType, setContactType] = useState("UK");
-	const handleContactTypeChange = (event) => {
-		setContactType(event.target.value);
-	};
+    const { i18n } = useTranslation();
+    const [isLangActive, setIsLangActive] = useState(false);
+    const { lang, changeLang } = useEventContext(EventContext);
 
-	return (
-		<form>
-			<select
-				className={css.select}
-				id='contact-type'
-				value={contactType}
-				disabled
-				onChange={handleContactTypeChange}>
-				<option className={css.option} value='UK'>
-					UK
-				</option>
-				<option className={css.option} value='EN'>
-					EN
-				</option>
-			</select>
-		</form>
-	);
+    const handleLangClick = () => {
+        setIsLangActive(!isLangActive);
+
+        if (isLangActive) {
+            setIsLangActive(false);
+        }
+    };
+
+    const changeLanguage = e => {
+        const lng = e.target.textContent;
+        changeLang(lng);
+        i18n.changeLanguage(lng);
+    };
+
+    return (
+        <>
+            <div onClick={handleLangClick} className={css.select}>
+                <span>{lang}</span>
+                <ArrowIcon />
+                {isLangActive && (
+                    <ul className={css.selectContainer}>
+                        <li onClick={changeLanguage} className={css.selectItem}>
+                            EN
+                        </li>
+                        <li onClick={changeLanguage} className={css.selectItem}>
+                            ES
+                        </li>
+                    </ul>
+                )}
+            </div>
+        </>
+    );
 };

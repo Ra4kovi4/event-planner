@@ -1,227 +1,232 @@
 .cardWrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	width: 272px;
-	margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 272px;
+    margin: 0 auto;
 
-	@media screen and (min-width: 768px) {
-		width: 688px;
-	}
+    @media screen and (min-width: 768px) {
+        width: 688px;
+    }
 
-	@media screen and (min-width: 1280px) {
-		width: 628px;
-	}
+    @media screen and (min-width: 1280px) {
+        width: 628px;
+    }
 }
 .titleWrapper {
-	width: 100%;
-	text-align: start;
-	margin-bottom: 24px;
-	@media screen and (min-width: 1280px) {
-		margin-bottom: 16px;
-	}
+    width: 100%;
+    text-align: start;
+    margin-bottom: 24px;
+    @media screen and (min-width: 1280px) {
+        margin-bottom: 16px;
+    }
 }
 .title {
-	color: var(--fisrt-title-color);
-	font-size: 24px;
+    color: var(--fisrt-title-color);
+    font-size: 24px;
 }
 .card {
-	background-color: var(--background-color);
+    background-color: var(--background-color);
 
-	width: 100%;
-	border-radius: 12px;
+    width: 100%;
+    border-radius: 12px;
 
-	box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
-	overflow: hidden;
-	margin: 0 auto;
+    box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
+    overflow: hidden;
+    margin: 0 auto;
 }
 
 .pictureBox {
-	position: relative;
+    position: relative;
 }
 
 .picture {
-	max-width: 100%;
-	width: 272px;
-	height: 168px;
-	border-top-left-radius: 12px;
-	border-top-right-radius: 12px;
-	object-fit: cover;
+    max-width: 100%;
+    width: 272px;
+    height: 168px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    object-fit: cover;
+    object-position: 50% 50%;
 
-	@media screen and (min-width: 768px) {
-		width: 688px;
-		height: 272px;
-	}
+    @media screen and (min-width: 768px) {
+        width: 688px;
+        height: 272px;
+    }
 
-	@media screen and (min-width: 1280px) {
-		width: 628px;
-	}
+    @media screen and (min-width: 1280px) {
+        width: 628px;
+    }
 }
 
 .categoryWrap {
-	display: flex;
-	flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
 }
 
 .category,
 .priority,
 .location,
 .time {
-	display: flex;
-	height: 32px;
-	justify-content: center;
-	align-items: center;
-	border-radius: 8px;
-	margin-right: 12px;
-	padding: 0 12px;
-	background-color: #fff;
-	text-align: center;
-	font-size: 14px;
-	line-height: calc(20 / 14);
-	color: #7b61ff;
-	background-color: var(--background-color);
-	box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin-right: 5px;
+    padding: 0 12px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 14px;
+    line-height: calc(20 / 14);
+    color: #7b61ff;
+    background-color: var(--background-color);
+    box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
 }
-.location {
-	margin-bottom: 12px;
+
+.priority[data-priority='High'],
+.priority[data-priority='Alta'] {
+    color: #ff2b77;
 }
+
+.priority[data-priority='Low'],
+.priority[data-priority='Baja'] {
+    color: #6bd475;
+}
+
+.priority[data-priority='Medium'],
+.priority[data-priority='Media'] {
+    color: #e2a300;
+}
+
 .category,
 .location {
-	font-weight: 500;
+    font-weight: 500;
 }
-.category {
-	margin-bottom: 12px;
-	@media screen and (min-width: 768px) {
-		margin-bottom: 0;
-	}
-}
+
 .priority {
-	display: inline-block;
-	padding: 6px 12px;
-	background-color: #fff;
-	text-align: center;
-	font-size: 14px;
-	font-weight: 500;
-	line-height: calc(20 / 14);
-	border-radius: 8px;
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: calc(20 / 14);
+    border-radius: 8px;
 }
 
-.priority[data-priority="high"] {
-	color: #ff2b77;
+.priority[data-priority='high'] {
+    color: #ff2b77;
 }
 
-.priority[data-priority="low"] {
-	color: #6bd475;
+.priority[data-priority='low'] {
+    color: #6bd475;
 }
 
-.priority[data-priority="medium"] {
-	color: #e2a300;
+.priority[data-priority='medium'] {
+    color: #e2a300;
 }
 
 .infoBox {
-	display: flex;
-	background-color: var(--background-color);
-	padding: 24px 0 40px 0;
+    display: flex;
+    background-color: var(--background-color);
+    padding: 24px 0;
 }
 .info {
-	padding: 24px 16px 40px 16px;
-	@media screen and (min-width: 768px) {
-		padding: 24px 24px 40px 24px;
-	}
-	@media screen and (min-width: 1280px) {
-		padding: 24px 40px 40px 40px;
-	}
+    padding: 24px 16px 40px 16px;
+    @media screen and (min-width: 768px) {
+        padding: 24px 24px 24px 24px;
+    }
 }
 .timetable {
-	display: flex;
-	left: 0;
-
-	padding: 8px 16px;
-
-	width: 100%;
+    display: flex;
+    left: 0;
+    padding: 8px 16px;
+    width: 100%;
 }
 
 .timetable span {
-	color: var(--accent-color);
-	font-size: 14px;
-	font-weight: 400;
-	line-height: calc(24 / 14);
+    color: var(--accent-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: calc(24 / 14);
 }
 
 .description {
-	color: var(--fisrt-text-color);
-	font-size: 14px;
-	line-height: calc(20 / 14);
-	width: 100%;
-	display: block;
+    color: var(--fisrt-text-color);
+    font-size: 14px;
+    line-height: calc(20 / 14);
+    width: 100%;
+    display: block;
 }
 
 .deleteBtn {
-	display: flex;
+    display: flex;
 
-	height: 32px;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+    height: 32px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-	border-radius: 4px;
-	background-color: var(--accent-color);
-	color: var(--button-text-color);
+    border-radius: 4px;
+    background-color: var(--accent-color);
+    color: var(--button-text-color);
 
-	text-align: center;
+    text-align: center;
 
-	font-size: 12px;
+    font-size: 12px;
 
-	font-weight: 500;
-	line-height: 1.43;
-	transition: background-color 2000ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    font-weight: 500;
+    line-height: 1.43;
+    transition: background-color 2000ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .infoBtn:hover,
 .infoBtn:focus {
-	background-color: var(--hover-color);
+    background-color: var(--hover-color);
 }
 .infoBtn:hover,
 .infoBtn:focus,
 .deleteBtn:hover,
 .deleteBtn:focus {
-	background-color: var(--hover-color);
+    background-color: var(--hover-color);
 }
 .buttonContainer {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	@media screen and (min-width: 768px) {
-		justify-content: flex-end;
-	}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (min-width: 768px) {
+        justify-content: flex-end;
+    }
 }
 .editBtn {
-	width: 108px;
-	height: 32px;
-	border-radius: 4px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: var(--accent-color);
-	text-align: center;
-	font-family: Poppins;
-	font-size: 12px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: 1.33;
-	margin-right: 24px;
-	border: 1px solid var(--accent-color);
-	background-color: var(--button-text-color);
-	transition: background-color 2000ms cubic-bezier(0.4, 0, 0.2, 1);
-	@media screen and (min-width: 768px) {
-		width: 55px;
-		margin-right: 16px;
-		margin-left: auto;
-	}
+    width: 108px;
+    height: 32px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.33;
+    margin-right: 24px;
+    border: 1px solid var(--accent-color);
+    background-color: var(--button-text-color);
+    transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (min-width: 768px) {
+        width: 55px;
+        margin-right: 16px;
+        margin-left: auto;
+    }
 }
 .editBtn:hover,
 .editBtn:focus {
-	color: var(--button-text-color);
-	background-color: var(--hover-color);
-	border: 1px solid var(--button-text-color);
+    color: var(--button-text-color);
+    background-color: var(--hover-color);
+    border: 1px solid var(--button-text-color);
 }
