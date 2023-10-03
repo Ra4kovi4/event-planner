@@ -10,4 +10,7 @@ export default defineConfig({
         jsxFactory: 'h',
         jsxFragment: 'Fragment',
     },
+    build: {
+        outDir: 'dist',
+    },
 });
