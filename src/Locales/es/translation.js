@@ -19,7 +19,6 @@ export const ES = {
     'edit-event-btn': 'Guardar',
     'go-back': 'Atrás',
     'delete-event': 'Borrar evento',
-    at: 'a las',
     'edit-button': 'Editar',
     'search-input': 'Búsqueda de palabras clave',
     'not-selected': 'No seleccionado',
