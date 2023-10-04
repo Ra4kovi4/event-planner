@@ -3,11 +3,13 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
+    "homepage": "",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
         "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "deploy": "vite build && gh-pages -d dist"
     },
     "dependencies": {
         "antd": "^5.8.2",
@@ -15,6 +17,7 @@
         "date-fns": "^2.30.0",
         "datepicker": "^0.0.0",
         "formik": "^2.4.3",
+        "gh-pages": "^6.0.0",
         "i": "^0.3.7",
         "i18next": "^23.4.6",
         "lodash.debounce": "^4.0.8",

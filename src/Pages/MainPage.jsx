@@ -15,6 +15,7 @@ const MainPage = () => {
     const { pathname, search } = useLocation();
 
     const [searchParams] = useSearchParams(search);
+
     const { events, isLoading, page, totalPage, updatePage } =
         useEventContext(EventContext);
 
