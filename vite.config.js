@@ -5,7 +5,7 @@ import svgr from 'vite-plugin-svgr';
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [svgr(), react()],
-    base: '/events',
+    base: '/events/',
     esbuild: {
         jsxFactory: 'h',
         jsxFragment: 'Fragment',
