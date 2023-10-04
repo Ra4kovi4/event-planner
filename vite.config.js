@@ -5,17 +5,18 @@ import svgr from 'vite-plugin-svgr';
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [svgr(), react()],
-    base: '/event-planner/events',
+    base: '/events',
     esbuild: {
         jsxFactory: 'h',
         jsxFragment: 'Fragment',
     },
+    output: {
+        publicPath: '/',
+    },
     build: {
         rollupOptions: {
             output: {
-                manualChunks: {
-                    '404.html': ['./404.html'],
-                },
+                dir: 'dist/events',
             },
         },
     },
