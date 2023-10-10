@@ -96,7 +96,4 @@ These pages contain a form necessary for creating and editing events.
 -   After submitting the form, it returns to the main page when creating a new
     event or to the event page if editing an existing one.
 
----
 
-Feel free to customize this README to match your project's specifics and
-requirements.
